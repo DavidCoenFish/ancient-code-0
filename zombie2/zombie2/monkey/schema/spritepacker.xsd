@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+  
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="vector2FloatType">
+    <xsd:sequence>
+      <xsd:element name="x" type="xsd:float"/>
+      <xsd:element name="y" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="vector2IntType">
+    <xsd:sequence>
+      <xsd:element name="x" type="xsd:int"/>
+      <xsd:element name="y" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="destination" type="destinationType"/>
+      <xsd:element name="arraySpriteSource" type="arraySpriteSourceType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="destinationType">
+    <xsd:sequence>
+      <xsd:element name="imageFile" type="xsd:string"/>
+      <xsd:element name="size" type="vector2IntType"/>
+      <xsd:element name="writeBoundsTopLeft" type="vector2FloatType"/>
+      <xsd:element name="writeBoundsBottomRight" type="vector2FloatType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arraySpriteSourceType">
+    <xsd:sequence>
+      <xsd:element name="spriteSource" type="spriteSourceType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="spriteSourceType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="file" type="xsd:string"/>
+      <xsd:element name="fileAlpha" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

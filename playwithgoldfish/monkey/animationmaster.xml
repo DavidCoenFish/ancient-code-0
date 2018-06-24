@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/animationmaster.xsd"
+      >
+  <boneListPosition>
+    <name>Bone_head</name>
+  </boneListPosition>
+  <boneListRotation>
+    <name>Bone_head</name>
+    <name>Bone_back</name>
+    <name>Bone_tail</name>
+    <name>Bone_tailright</name>
+    <name>Bone_tailleft</name>
+    <name>Bone_mouth</name>
+    <name>Bone_eyeright</name>
+    <name>Bone_eyeleft</name>
+    <name>Bone_body</name>
+    <name>Bone_thumbleft</name>
+    <name>Bone_thumbright</name>
+    <name>Bone_fingerleft</name>
+    <name>Bone_fingerright</name>
+  </boneListRotation>
+  <animationList>
+    <file>animation/feed.xml</file>
+    <file>animation/idle.xml</file>
+    <file>animation/idle_agitated.xml</file>
+    <file>animation/idle_sleepy.xml</file>
+    <file>animation/move.xml</file>
+    <file>animation/turn_left.xml</file>
+    <file>animation/turn_left_hard.xml</file>
+    <file>animation/turn_right.xml</file>
+    <file>animation/turn_right_hard.xml</file>
+  </animationList>
+</root>

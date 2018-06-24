@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:simpleType name="transitionTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TLinear"/>
+      <xsd:enumeration value="TEaseInOut"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="mission" type="missionType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="missionType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="sequenceArray" type="sequenceArrayType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="sequenceArrayType">
+    <xsd:sequence>
+      <xsd:element name="sequence" type="sequenceType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="sequenceType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="key" type="keyType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="keyType">
+    <xsd:sequence>
+      <xsd:element name="time" type="xsd:float"/>
+      <xsd:group ref="dataTypeGroup"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="dataTypeGroup">
+    <xsd:choice>
+      <xsd:element name="dataAnimateClientTrigger" type="dataAnimateClientTriggerType"/>
+      <xsd:element name="dataAnimateClientTriggerFloat" type="dataAnimateClientTriggerFloatType"/>
+      <xsd:element name="dataAnimateClientTriggerString" type="dataAnimateClientTriggerStringType"/>
+      <xsd:element name="dataAnimateClientTriggerVector" type="dataAnimateClientTriggerVectorType"/>
+      <xsd:element name="dataAnimateClientTriggerVectorVector" type="dataAnimateClientTriggerVectorVectorType"/>
+      <xsd:element name="dataClientTrigger" type="dataClientTriggerType"/>
+      <xsd:element name="dataClientTriggerFloat" type="dataClientTriggerFloatType"/>
+      <xsd:element name="dataClientTriggerString" type="dataClientTriggerStringType"/>
+      <xsd:element name="dataClientTriggerVector" type="dataClientTriggerVectorType"/>
+      <xsd:element name="dataClientTriggerVectorVector" type="dataClientTriggerVectorVectorType"/>
+      <xsd:element name="dataLoopSequence" type="dataLoopSequenceType"/>
+      <xsd:element name="nop" type="nopType"/>
+      <xsd:element name="dataPlayAnimation" type="dataPlayAnimationType"/>
+      <xsd:element name="dataTriggerSequence" type="dataTriggerSequenceType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="dataAnimateClientTriggerType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="lerpDuration" type="xsd:float"/>
+      <xsd:element name="lerpType" type="transitionTypeEnum"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataAnimateClientTriggerFloatType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="value" type="xsd:float"/>
+      <xsd:element name="lerpDuration" type="xsd:float"/>
+      <xsd:element name="lerpType" type="transitionTypeEnum"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataAnimateClientTriggerStringType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="value" type="xsd:string"/>
+      <xsd:element name="lerpDuration" type="xsd:float"/>
+      <xsd:element name="lerpType" type="transitionTypeEnum"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataAnimateClientTriggerVectorType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="valueX" type="xsd:float"/>
+      <xsd:element name="valueY" type="xsd:float"/>
+      <xsd:element name="valueZ" type="xsd:float"/>
+      <xsd:element name="lerpDuration" type="xsd:float"/>
+      <xsd:element name="lerpType" type="transitionTypeEnum"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataAnimateClientTriggerVectorVectorType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="valueOneX" type="xsd:float"/>
+      <xsd:element name="valueOneY" type="xsd:float"/>
+      <xsd:element name="valueOneZ" type="xsd:float"/>
+      <xsd:element name="valueTwoX" type="xsd:float"/>
+      <xsd:element name="valueTwoY" type="xsd:float"/>
+      <xsd:element name="valueTwoZ" type="xsd:float"/>
+      <xsd:element name="lerpDuration" type="xsd:float"/>
+      <xsd:element name="lerpType" type="transitionTypeEnum"/>
+    </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="dataClientTriggerType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataClientTriggerFloatType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="value" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataClientTriggerStringType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="value" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataClientTriggerVectorType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="valueX" type="xsd:float"/>
+      <xsd:element name="valueY" type="xsd:float"/>
+      <xsd:element name="valueZ" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataClientTriggerVectorVectorType">
+    <xsd:sequence>
+      <xsd:element name="clientTrigger" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:string"/>
+      <xsd:element name="valueOneX" type="xsd:float"/>
+      <xsd:element name="valueOneY" type="xsd:float"/>
+      <xsd:element name="valueOneZ" type="xsd:float"/>
+      <xsd:element name="valueTwoX" type="xsd:float"/>
+      <xsd:element name="valueTwoY" type="xsd:float"/>
+      <xsd:element name="valueTwoZ" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="nopType">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataTriggerSequenceType">
+    <xsd:sequence>
+      <xsd:element name="sequenceName" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataPlayAnimationType">
+    <xsd:sequence>
+      <xsd:element name="actorName" type="xsd:string"/>
+      <xsd:element name="animationName" type="xsd:string"/>
+      <xsd:element name="rate" type="xsd:float" minOccurs="0"/>
+      <xsd:element name="fadeTime" type="xsd:float" minOccurs="0"/>
+      <xsd:element name="startTime" type="xsd:float" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="dataLoopSequenceType">
+    <xsd:sequence>
+      <xsd:element name="gotoTime" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

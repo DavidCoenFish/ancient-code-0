@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:simpleType name="u8">
+    <xsd:restriction base="xsd:int">
+      <xsd:minInclusive value="-1"/>
+      <xsd:maxInclusive value="255"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="u16">
+    <xsd:restriction base="xsd:int">
+      <xsd:minInclusive value="-1"/>
+      <xsd:maxInclusive value="65535"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="u32">
+    <xsd:restriction base="xsd:long">
+      <xsd:minInclusive value="-1"/>
+      <xsd:maxInclusive value="4294967295"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:group ref="dataTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="dataTypeGroup">
+    <xsd:choice>
+      <xsd:element name="u8" type="u8"/>
+      <xsd:element name="u16" type="u16"/>
+      <xsd:element name="u32" type="u32"/>
+      <xsd:element name="r32" type="xsd:float"/>
+      <xsd:element name="u8array" type="xsd:string"/>
+      <xsd:element name="u16array" type="xsd:string"/>
+      <xsd:element name="u32array" type="xsd:string"/>
+      <xsd:element name="r32array" type="xsd:string"/>
+      <xsd:element name="string" type="xsd:string"/>
+      <xsd:element name="pointer" type="pointerType"/>
+      <xsd:element name="reference" type="referenceType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="pointerType">
+    <xsd:sequence>
+      <xsd:group ref="dataTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="alignment" type="xsd:positiveInteger" use="optional"/>
+    <xsd:attribute name="label" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="referenceType">
+    <xsd:sequence/>
+    <xsd:attribute name="label" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+
+
+</xsd:schema>

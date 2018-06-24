@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="gui" type="guiType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="guiType">
+    <xsd:sequence>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="nodeType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" />
+
+      <xsd:element name="flagSquareMin" type="xsd:boolean" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="flagSquareMax" type="xsd:boolean" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="flagSquareVertical" type="xsd:boolean" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="flagSquareHorizontal" type="xsd:boolean" minOccurs="0" maxOccurs="1" />
+
+      <xsd:element name="originRatioX" type="xsd:float" />
+      <xsd:element name="originRatioY" type="xsd:float" />
+      <xsd:element name="originOffsetX" type="xsd:float" />
+      <xsd:element name="originOffsetY" type="xsd:float" />
+
+      <xsd:element name="sizeRatioX" type="xsd:float" />
+      <xsd:element name="sizeRatioY" type="xsd:float" />
+      <xsd:element name="sizeOffsetX" type="xsd:float" />
+      <xsd:element name="sizeOffsetY" type="xsd:float" />
+
+      <xsd:group ref="componentTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="componentTypeGroup">
+    <xsd:choice>
+      <xsd:element name="componentPanel" type="componentPanelType"/>
+      <xsd:element name="componentText" type="componentTextType"/>
+      <xsd:element name="componentButton" type="componentButtonType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="componentPanelType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" />
+      <xsd:element name="flagVisible" type="xsd:boolean"/>
+      <xsd:element name="flagColour1" type="xsd:boolean" />
+      <xsd:element name="flagColour4" type="xsd:boolean" />
+
+      <xsd:element name="red0" type="xsd:float" minOccurs="0" />
+      <xsd:element name="green0" type="xsd:float" minOccurs="0" />
+      <xsd:element name="blue0" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alpha0" type="xsd:float" minOccurs="0" />
+      
+      <xsd:element name="red1" type="xsd:float" minOccurs="0" />
+      <xsd:element name="green1" type="xsd:float" minOccurs="0" />
+      <xsd:element name="blue1" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alpha1" type="xsd:float" minOccurs="0" />
+      
+      <xsd:element name="red2" type="xsd:float" minOccurs="0" />
+      <xsd:element name="green2" type="xsd:float" minOccurs="0" />
+      <xsd:element name="blue2" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alpha2" type="xsd:float" minOccurs="0" />
+      
+      <xsd:element name="red3" type="xsd:float" minOccurs="0" />
+      <xsd:element name="green3" type="xsd:float" minOccurs="0" />
+      <xsd:element name="blue3" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alpha3" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="flagUV" type="xsd:boolean" />
+      <xsd:element name="UVTop" type="xsd:float" minOccurs="0" />
+      <xsd:element name="UVLeft" type="xsd:float" minOccurs="0" />
+      <xsd:element name="UVBottom" type="xsd:float" minOccurs="0" />
+      <xsd:element name="UVRight" type="xsd:float" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentTextType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="flagVisible" type="xsd:boolean"/>
+      <xsd:element name="red" type="xsd:float"/>
+      <xsd:element name="green" type="xsd:float"/>
+      <xsd:element name="blue" type="xsd:float"/>
+      <xsd:element name="alpha" type="xsd:float"/>
+      <xsd:element name="fontName" type="xsd:string"/>
+      <xsd:element name="text" type="xsd:string"/>
+      <xsd:element name="scale" type="xsd:float"/>
+      <xsd:element name="horizontalCharPad" type="xsd:float"/>
+      <xsd:element name="maximumCharCount" type="xsd:integer"/>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentButtonType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="actionScriptButtonDown" type="xsd:string"/>
+      <xsd:element name="actionScriptButtonPress" type="xsd:string"/>
+      <xsd:element name="actionScriptButtonCancel" type="xsd:string"/>
+      <xsd:element name="actionScriptButtonEnable" type="xsd:string"/>
+      <xsd:element name="actionScriptButtonDisable" type="xsd:string"/>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

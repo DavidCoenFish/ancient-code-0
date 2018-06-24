@@ -1,0 +1,41 @@
+D:\>development\project\playwithgoldfish\pipeline\monkey\Main.py D:\development\project\playwithgoldfish\playwithgoldfish\monkey\build.xml -v
+
+
+D:\>development\project\playwithgoldfish\pipeline\monkey\Main.py D:\development\project\playwithgoldfish\playwithgoldfish\monkey\build.xml -p ios
+
+
+/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool
+texturetool -e PVRTC --bits-per-pixel-4 -p preview.png -o tex.pvr -f PVR tex_1024.png
+
+
+bool result = [myArray writeToFile:[fileMethods 
+                                    getFullPath:[NSString 
+                                                 stringWithFormat:@"iEts%@.arr", 
+                                                 [aDate shortDateString]]] 
+                       atomically:NO];
+
++ (NSString *) getFullPath:(NSString *)in_fileName {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:in_fileName];
+}
+
+NSClassFromString
+
+\\de
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\de.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_de.txt
+
+\\es
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\es.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_es.txt
+
+\\fr
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\fr.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_fr.txt
+
+\\id
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\id.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_id.txt
+
+\\it
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\it.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_it.txt
+
+\\ja
+development\project\tools\python\source\languageproject.py --merge D:\development\project\playwithgoldfish\playwithgoldfish\resources\ja.lproj\Localizable.strings D:\development\project\playwithgoldfish\playwithgoldfish\language\key.txt D:\development\project\playwithgoldfish\playwithgoldfish\language\data_ja.txt

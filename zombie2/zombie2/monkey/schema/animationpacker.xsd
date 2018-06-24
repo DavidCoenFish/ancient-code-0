@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="loop" type="xsd:boolean"/>
+      <xsd:element name="length" type="xsd:float"/>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="nodeType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="animation" type="animationType"/>
+      <xsd:element name="noteTrack" type="noteTrackType" minOccurs="0"/>
+      <xsd:element name="morphTrack" type="morphTrackType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="animationType">
+    <xsd:sequence>
+      <xsd:element name="key" type="keyType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="keyType">
+    <xsd:sequence>
+      <xsd:element name="time" type="xsd:float"/>
+      <xsd:element name="matrix" type="matrixType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="matrixType">
+    <xsd:sequence>
+      <xsd:element name="float" type="xsd:float" minOccurs="16" maxOccurs="16"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="noteTrackType">
+    <xsd:sequence>
+      <xsd:element name="key" type="noteKeyType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="noteKeyType">
+    <xsd:sequence>
+      <xsd:element name="time" type="xsd:float"/>
+      <xsd:element name="value" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="morphTrackType">
+    <xsd:sequence>
+      <xsd:element name="target" type="morphTargetType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="morphTargetType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="key" type="morphTrackKeyType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="morphTrackKeyType">
+    <xsd:sequence>
+      <xsd:element name="time" type="xsd:float"/>
+      <xsd:element name="weight" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

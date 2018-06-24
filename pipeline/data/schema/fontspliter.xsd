@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="source" type="sourceType"/>
+      <xsd:element name="destination" type="destinationType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="sourceType">
+    <xsd:sequence>
+      <xsd:element name="spaceWidth" type="xsd:integer"/>
+      <xsd:element name="newLine" type="xsd:integer"/>
+      <xsd:element name="image" type="imageType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="imageType">
+    <xsd:sequence>
+      <xsd:element name="filePath" type="xsd:string"/>
+      <xsd:element name="charSequence" type="xsd:string"/>
+      <xsd:element name="baseLine" type="xsd:integer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="destinationType">
+    <xsd:sequence>
+      <xsd:element name="destinationPath" type="xsd:string"/>
+      <xsd:element name="tagetTexture" type="xsd:string"/>
+      <xsd:element name="targetWidth" type="xsd:integer" />
+      <xsd:element name="targetHeight" type="xsd:integer" />
+      <xsd:element name="writeOriginX" type="xsd:integer" />
+      <xsd:element name="writeOriginY" type="xsd:integer" />
+      <xsd:element name="writeWidth" type="xsd:integer" />
+      <xsd:element name="writeHeight" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

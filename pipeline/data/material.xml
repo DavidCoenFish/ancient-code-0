@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/MaterialPacker.xsd"
+      >
+		<faceCW>true</faceCW>
+		<faceCull>true</faceCull>
+		<colourWrite>true</colourWrite>
+		<textureDataName>texture.data</textureDataName>
+		<useTexture>true</useTexture>
+		<red>1.0</red>
+		<green>1.0</green>
+		<blue>1.0</blue>
+		<alpha>1.0</alpha>
+		<alphaBlend>true</alphaBlend>
+		<blendModeSrc>TSrcAlpha</blendModeSrc>
+		<blendModeDst>TOneMinusSrcAlpha</blendModeDst>
+		<depthRead>true</depthRead>
+		<depthWrite>false</depthWrite>
+		<stencilShadowFront>false</stencilShadowFront>
+		<stencilShadowBack>false</stencilShadowBack>
+		<stencilShadow>false</stencilShadow>
+		<useLighting>false</useLighting>
+		<doBasePass>false</doBasePass>
+		<doEnvironmentPass>false</doEnvironmentPass>
+		<environmentUVTile>1</environmentUVTile>
+		<environmentUVIndex>0</environmentUVIndex>
+		<vertexFileName>vertexshadergroundalpha.txt</vertexFileName>
+		<fragmentFileName>fragmentshadergroundalpha.txt</fragmentFileName>
+		<attributeNameArray>
+			<item>a_position</item>
+			<item>a_colour</item>
+			<item>a_uv0</item>
+		</attributeNameArray>
+		<uniformNameArray>
+			<item>u_mvpMatrix</item>
+		</uniformNameArray>
+</root>

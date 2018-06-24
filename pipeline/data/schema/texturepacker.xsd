@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:simpleType name="textureDestinationTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TRgb"/>
+      <xsd:enumeration value="TRgba"/>
+      <xsd:enumeration value="TGreyscale"/>
+      <xsd:enumeration value="TPalette4_rgb8"/>
+      <xsd:enumeration value="TPalette4_rgba8"/>
+      <xsd:enumeration value="TPalette4_r5g6b5"/>
+      <xsd:enumeration value="TPalette4_rgba4"/>
+      <xsd:enumeration value="TPalette4_rgb5a1"/>
+      <xsd:enumeration value="TPalette8_rgb8"/>
+      <xsd:enumeration value="TPalette8_rgba8"/>
+      <xsd:enumeration value="TPalette8_r5g6b5"/>
+      <xsd:enumeration value="TPalette8_rgba4"/>
+      <xsd:enumeration value="TPalette8_rgb5a1"/>
+      <xsd:enumeration value="TPVRTC4_rgb"/>
+      <xsd:enumeration value="TPVRTC2_rgb"/>
+      <xsd:enumeration value="TPVRTC4_rgba"/>
+      <xsd:enumeration value="TPVRTC2_rgba"/> 
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:choice>
+      <xsd:element name="arrayTextureData" type="arrayTextureDataType"/>
+      <xsd:group ref="textureDataGroup"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayTextureDataType">
+    <xsd:sequence>
+      <xsd:element name="textureData" type="textureDataType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="textureDataGroup">
+    <xsd:sequence>
+      <xsd:element name="textureFile" type="xsd:string"/>
+      <xsd:element name="textureAlphaFile" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="textureDataName" type="xsd:string"/>
+      <xsd:element name="textureDestinationType" type="textureDestinationTypeEnum"/>
+    </xsd:sequence>
+  </xsd:group>
+
+  <xsd:complexType name="textureDataType">
+    <xsd:sequence>
+      <xsd:group ref="textureDataGroup"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

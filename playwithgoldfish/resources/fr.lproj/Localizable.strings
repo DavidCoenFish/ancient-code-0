@@ -1,0 +1,64 @@
+/* 
+   Localizable.strings
+   playwithgoldfish
+
+   Created by David Coen on 24/01/11.
+   Copyright 2011 Pleasure seeking morons. All rights reserved.
+ */
+
+"InfoTitle" = "jouer avec des poissons rouges";
+"InfoMessage" = "Touch:
+Poisson rouge d'alimentation
+Multi-touch:
+Appareil photo zoom, panoramique et la latitude
+Shake:
+Camera Reset et poissons rouges";
+"InfoButton" = "Continuer";
+"OptionTitle" = "Paramètres";
+"OptionMaterial" = "Goldfish couleur";
+"OptionMaterialDescriptionKey" = "Sélectionnez poissons rouges matériel";
+"orange" = "Rouge";
+"white" = "Blanc";
+"black" = "Black";
+"gold" = "Jaune";
+"chromebump" = "Bump Chrome";
+"chromebump2" = "Bump Chrome 2";
+"chrome" = "Chrome";
+"chrome2" = "Chrome 2";
+"OptionAnimation" = "Animation";
+"OptionAnimationTypeDescriptionKey" = "Sélectionnez le mode d'animer le poisson rouge";
+"TAnimationNone" = "Aucune animation";
+"TAnimationAI" = "Sélection automatique";
+"TAnimationFeed" = "Feed";
+"TAnimationIdle" = "Ralenti";
+"TAnimationIdleAgitated" = "Excité";
+"TAnimationIdleSleep" = "Somnolent";
+"TAnimationMove" = "Déménagement";
+"OptionMovement" = "Mouvement";
+"OptionMovementTypeDescriptionKey" = "Sélectionnez la façon dont les mouvements poissons rouges";
+"TMovementNone" = "Aucun mouvement";
+"TMovementAI" = "Automatique";
+"TMovementInput" = "Écran tactile";
+"OptionViewBackground" = "Contexte";
+"OptionViewBackgroundTypeDescriptionKey" = "Sélectionnez l'apparence de fond";
+"TViewBackCamera" = "Appareil photo";
+"TViewBackBlack" = "Black";
+"TViewBackWhite" = "Blanc";
+"TViewBackGray" = "Grey";
+"TViewBackLightBlue" = "Aqua";
+"TViewBackDarkBlue" = "Marine";
+"OptionViewCamera" = "Voir photo";
+"OptionViewCameraTypeDescriptionKey" = "Sélectionnez le type de caméra";
+"TViewCameraAccelerometer" = "Utilisez l'accéléromètre";
+"TViewCameraTop" = "Vue d'en haut";
+"TViewCameraThreeQuater" = "3 / 4 point de vue";
+"TViewCameraHalf" = "1 / 2 point de vue";
+"TViewCameraQuater" = "1 / 4 point de vue";
+"TViewCameraFront" = "Front";
+"TViewCameraUnder" = "Sous";
+"OptionOversampleTypeKey" = "Anti-aliasing";
+"OptionOversampleTypeDescriptionKey" = "Sélectionnez anti-aliasing de la qualité";
+"TSuperSample10" = "Aucun";
+"TSuperSample15" = "50%";
+"TSuperSample20" = "100%";
+"OptionResetKey" = "Restaurer les paramètres";

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:include schemaLocation="filepath.xsd" />
+  
+  <xsd:element name="root" type="rootType" />
+  
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="pathList" type="pathListType"/>
+      <xsd:element name="builderList" type="builderListType"/>
+      <xsd:element name="actionList" type="actionListType"/>
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:int"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="pathListType">
+    <xsd:sequence>
+      <xsd:element name="base" type="pathListBaseType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="pathListBaseType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:group ref="pathGroup"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="builderListType">
+    <xsd:sequence>
+      <xsd:group ref="builderTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="builderTypeGroup">
+    <xsd:choice>
+      <xsd:element name="builderCommandLine" type="builderCommandLineType"/>
+      <xsd:element name="builderMax" type="builderMaxType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="builderCommandLineType">
+    <xsd:sequence>
+      <xsd:element name="sourceType" type="xsd:string"/>
+      <xsd:element name="destinationType" type="xsd:string"/>
+      <xsd:element name="executablePath" type="filePathType"/>
+      <xsd:element name="useDataId" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="usePlatform" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="builderMaxType">
+    <xsd:sequence>
+      <xsd:element name="sourceType" type="xsd:string"/>
+      <xsd:element name="destinationType" type="xsd:string"/>
+      <xsd:element name="executablePath" type="filePathType"/>
+      <xsd:element name="functionName" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="actionListType">
+    <xsd:sequence>
+      <xsd:group ref="actionTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:group name="actionTypeGroup">
+    <xsd:choice>
+      <xsd:element name="action" type="actionType"/>
+    </xsd:choice>
+  </xsd:group>
+  
+  <xsd:complexType name="actionType">
+    <xsd:sequence>
+      <xsd:element name="sourceFile" type="actionFileType"/>
+      <xsd:element name="destinationFile" type="actionFileType"/>
+      <xsd:element name="dependancy" type="actionDependancyFileType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="actionFileType">
+    <xsd:sequence>
+      <xsd:group ref="filePathGroup"/>
+      <xsd:element name="type" type="xsd:string"/>
+      <xsd:element name="dataId" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="actionDependancyFileType">
+    <xsd:sequence>
+      <xsd:group ref="filePathAndPathGroup"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

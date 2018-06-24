@@ -1,0 +1,56 @@
+"InfoTitle" = "Juega con Goldfish";
+"InfoMessage" = "Toque:
+Piensos Goldfish
+Múlti Toque:
+Zoom de la cámara, pan y libertad
+Agite:
+Perdí mi cámara y Goldfish";
+"InfoButton" = "Continuar";
+"OptionTitle" = "Configuración";
+"OptionMaterial" = "Goldfish Color";
+"OptionMaterialDescriptionKey" = "Seleccione Goldfish material";
+"orange" = "Roja";
+"white" = "Blanca";
+"black" = "Negro";
+"gold" = "Amarillo";
+"chromebump" = "Chrome golpe";
+"chromebump2" = "Chrome 2 golpes";
+"chrome" = "Chrome";
+"chrome2" = "Chrome 2";
+"OptionAnimation" = "Animación";
+"OptionAnimationTypeDescriptionKey" = "Seleccione cómo lo animado peces de colores";
+"TAnimationNone" = "Sin animación";
+"TAnimationAI" = "Selección automática";
+"TAnimationFeed" = "Feed";
+"TAnimationIdle" = "Ocioso";
+"TAnimationIdleAgitated" = "Emocionado";
+"TAnimationIdleSleep" = "Soñoliento";
+"TAnimationMove" = "Traslado";
+"OptionMovement" = "Movimiento";
+"OptionMovementTypeDescriptionKey" = "Seleccione cómo se mueve el Goldfish";
+"TMovementNone" = "Ningún movimiento";
+"TMovementAI" = "Automática";
+"TMovementInput" = "Pantalla táctil";
+"OptionViewBackground" = "Antecedentes";
+"OptionViewBackgroundTypeDescriptionKey" = "Seleccione el aspecto de fondo";
+"TViewBackCamera" = "Cámara";
+"TViewBackBlack" = "Negro";
+"TViewBackWhite" = "Blanca";
+"TViewBackGray" = "Gris";
+"TViewBackLightBlue" = "Aqua";
+"TViewBackDarkBlue" = "Marina";
+"OptionViewCamera" = "Vista de la cámara";
+"OptionViewCameraTypeDescriptionKey" = "Seleccione el tipo de vista de cámara";
+"TViewCameraAccelerometer" = "El uso del acelerómetro";
+"TViewCameraTop" = "Vista desde arriba";
+"TViewCameraThreeQuater" = "4.3 vista";
+"TViewCameraHalf" = "1.2 vista";
+"TViewCameraQuater" = "1.4 vista";
+"TViewCameraFront" = "Frente";
+"TViewCameraUnder" = "Bajo";
+"OptionOversampleTypeKey" = "El anti-aliasing";
+"OptionOversampleTypeDescriptionKey" = "Seleccione anti-aliasing de calidad";
+"TSuperSample10" = "Ninguno";
+"TSuperSample15" = "50%";
+"TSuperSample20" = "100%";
+"OptionResetKey" = "Restaurar la configuración";

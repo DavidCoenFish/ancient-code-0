@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/fontspliter.xsd"
+      >
+  <source>
+    <spaceWidth>22</spaceWidth>
+    <newLine>26</newLine>
+    <image>
+      <filePath>fontspliter/alphanumeric_dejavu_italic_32.tga</filePath>
+      <!--<charSequence>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890`~!@#$%^*()_+-=[]{};':",./?\|&#169;</charSequence>-->
+      <charSequence>&#169;</charSequence>
+      <baseLine>30</baseLine>
+    </image>
+  </source>
+  
+  <destination>
+    <destinationPath>fontspliterout\</destinationPath>
+    <tagetTexture>fonttest.tga</tagetTexture>
+    <targetWidth>2048</targetWidth>
+    <targetHeight>2048</targetHeight>
+    <writeOriginX>512</writeOriginX>
+    <writeOriginY>1024</writeOriginY>
+    <writeWidth>512</writeWidth>
+    <writeHeight>512</writeHeight>
+  </destination>
+  
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/GuiPacker.xsd"
+      >
+  <gui>
+    <node>
+      <name>NodePlay01</name>
+      <flagSquareMin>false</flagSquareMin>
+      <flagSquareMax>false</flagSquareMax>
+      <originRatioX>0.5</originRatioX>
+      <originRatioY>1.0</originRatioY>
+      <originOffsetX>-127.0</originOffsetX>
+      <originOffsetY>-124.0</originOffsetY>
+      <sizeRatioX>0.0</sizeRatioX>
+      <sizeRatioY>0.0</sizeRatioY>
+      <sizeOffsetX>254.0</sizeOffsetX>
+      <sizeOffsetY>62.0</sizeOffsetY>
+      <componentText>
+        <name>Text10</name>
+        <flagVisible>true</flagVisible>
+        <red>1.0</red>
+        <green>0.521569</green>
+        <blue>0.0</blue>
+        <alpha>1.0</alpha>
+        <fontName>fontcourier.data</fontName>
+        <text>Play</text>
+        <scale>0.75</scale>
+        <horizontalCharPad>1.0</horizontalCharPad>
+        <maximumCharCount>4</maximumCharCount>
+      </componentText>
+    </node>
+  </gui>
+</root>

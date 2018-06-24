@@ -1,0 +1,25 @@
+#version 100
+
+uniform mat4 u_mvpMatrix; //model view projection matrix. to get from model to projection space
+uniform mat4 u_mMatrix; //model matrix. to get from model to world space
+
+attribute vec3 a_position;
+attribute vec4 a_normal;
+attribute vec4 a_tangent;
+attribute vec2 a_uv0;
+
+varying vec3 v_position;
+varying vec2 v_uv0;
+varying vec3 v_normal;
+varying vec4 v_tangent;
+
+void main()
+{
+	gl_Position = u_mvpMatrix * vec4(a_position, 1.0);
+	
+	v_position = (u_mMatrix * vec4(a_position, 1.0)).xyz;
+	v_uv0 = a_uv0;
+	v_normal = (u_mMatrix * vec4(a_normal.xyz, 0.0)).xyz;
+	v_tangent.xyz = (u_mMatrix * vec4(a_tangent.xyz, 0.0)).xyz;
+	v_tangent.w = a_tangent.w;
+}

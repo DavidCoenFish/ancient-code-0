@@ -1,0 +1,36 @@
+#version 100
+
+#ifdef GL_ES
+	#define LOWP lowp
+	#define MEDIUMP mediump
+	#define HIGHP highp
+#else
+	#define LOWP
+	#define MEDIUMP
+	#define HIGHP
+#endif
+
+uniform sampler2D u_texture2d_0;
+uniform MEDIUMP vec3 u_cameraPosition; //worldspace camera position
+
+varying MEDIUMP vec3 v_position; //world space
+varying LOWP vec3 v_normal;
+varying LOWP vec2 v_uv0;
+
+void main()
+{
+	LOWP vec3 eyeToPositionNormal = normalize(v_position.xyz - u_cameraPosition.xyz);
+	
+	LOWP vec3 normalReflectTemp = v_normal * dot(eyeToPositionNormal.xyz, v_normal.xyz);
+	LOWP vec3 normalReflect = (eyeToPositionNormal.xyz - normalReflectTemp) - normalReflectTemp;
+
+	LOWP float dotResultSpecular =  max(0.0, dot(normalReflect, vec3(0.4, 0.9, 0.4)));
+	LOWP float dotResultSpecularTemp = dotResultSpecular * dotResultSpecular;
+	
+	LOWP vec4 sampleColour = texture2D(u_texture2d_0, v_uv0); //diffuse map
+	gl_FragColor = sampleColour; //diffuse map
+	LOWP float specularMap = (1.0 - sampleColour.w);
+	LOWP float light0 = (specularMap * dotResultSpecularTemp) + ((-0.1) * min(0.0, v_normal.y));
+	gl_FragColor.xyz += vec3(light0, light0, light0);
+	//gl_FragColor.xyz = vec3(sampleColour.w, sampleColour.w, sampleColour.w);
+}

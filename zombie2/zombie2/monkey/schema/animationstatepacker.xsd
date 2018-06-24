@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:simpleType name="conditionModeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TChildrenConditionsAnd"/>
+      <xsd:enumeration value="TChildrenConditionsOr"/>
+
+      <xsd:enumeration value="TBoolTrue"/>
+      <xsd:enumeration value="TBoolFalse"/>
+
+      <xsd:enumeration value="TFloatGreater"/>
+      <xsd:enumeration value="TFloatGreaterEqual"/>
+      <xsd:enumeration value="TFloatEqual"/>
+      <xsd:enumeration value="TFloatLessEqual"/>
+      <xsd:enumeration value="TFloatLess"/>
+      <xsd:enumeration value="TFloatNotEqual"/>
+
+      <xsd:enumeration value="TIntGreater"/>
+      <xsd:enumeration value="TIntGreaterEqual"/>
+      <xsd:enumeration value="TIntEqual"/>
+      <xsd:enumeration value="TIntLessEqual"/>
+      <xsd:enumeration value="TIntLess"/>
+      <xsd:enumeration value="TIntNotEqual"/>
+      <xsd:enumeration value="TIntMod"/>
+
+      <xsd:enumeration value="TStringEqual"/>
+      <xsd:enumeration value="TStringNotEqual"/>
+      
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="animationDataFlagType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TManual"/>
+      <xsd:enumeration value="TUseStartRatio"/>
+
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="animationState" type="animationStateType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="animationStateType">
+    <xsd:sequence>
+      <xsd:element name="stateName" type="xsd:string"/>
+      <xsd:element name="condition" type="conditionType"/>
+      <xsd:element name="animationData" type="animationDataType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="conditionType">
+    <xsd:sequence>
+      <xsd:element name="mode" type="conditionModeType"/>
+      <xsd:element name="valueName" type="xsd:string" minOccurs="0" />
+      <xsd:element name="valueFloat" type="xsd:float" minOccurs="0" />
+      <xsd:element name="valueInt" type="xsd:int" minOccurs="0" />
+      <xsd:element name="valueIntOffset" type="xsd:int" minOccurs="0" />
+      <xsd:element name="valueString" type="xsd:string" minOccurs="0" />
+      <xsd:element name="condition" type="conditionType" minOccurs="0" maxOccurs="unbounded"/>      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="animationDataType">
+    <xsd:sequence>
+      <xsd:element name="animationName" type="xsd:string"/>
+      <xsd:element name="condition" type="conditionType" minOccurs="0"/>
+      <xsd:element name="adjustRate" type="adjustRateType" minOccurs="0"/>
+      <xsd:element name="fadeInTime" type="xsd:float" minOccurs="0"/>
+      <xsd:element name="rate" type="xsd:float" minOccurs="0" default="1.0"/>
+      <xsd:element name="flag" type="animationDataFlagType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="adjustRateType">
+    <xsd:sequence>
+      <xsd:element name="paramName" type="xsd:string"/>
+      <xsd:element name="paramLow" type="xsd:float"/>
+      <xsd:element name="paramHigh" type="xsd:float"/>
+      <xsd:element name="resultLow" type="xsd:float"/>
+      <xsd:element name="resultHigh" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

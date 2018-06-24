@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/missionmaster.xsd"
+      >
+
+  <missionList>
+    <file>mission.xml</file>
+  </missionList>
+  <genericSequenceList>
+    <file>genericSequence.xml</file>
+  </genericSequenceList>
+</root>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/animationmaster.xsd"
+      >
+  <boneListPosition>
+    <name>BoneBall</name>
+    <name>Bip01</name>
+  </boneListPosition>
+  <boneListRotation>
+    <name>BoneBall</name>
+    <name>Bip01</name>
+    <name>Bip01 Pelvis</name>
+    <name>Bip01 L Thigh</name>
+    <name>Bip01 L Calf</name>
+    <name>Bip01 L Foot</name>
+    <name>Bip01 L Toe0</name>
+    <name>Bip01 L Clavicle</name>
+    <name>Bip01 L UpperArm</name>
+    <name>Bip01 L Forearm</name>
+    <name>Bip01 L Hand</name>
+    <name>Bip01 R Thigh</name>
+    <name>Bip01 Ponytail1</name>
+    <name>Bip01 R Calf</name>
+    <name>Bip01 R Foot</name>
+    <name>Bip01 R Toe0</name>
+    <name>Bip01 R Clavicle</name>
+    <name>Bip01 R UpperArm</name>
+    <name>Bip01 R Forearm</name>
+    <name>Bip01 R Hand</name>
+    <name>Bip01 Spine</name>
+    <name>Bip01 Spine1</name>
+    <name>Bip01 Neck</name>
+    <name>Bip01 Head</name>
+    <name>BoneLeftBreast</name>
+    <name>BoneRightBreast</name>
+    <name>BoneLeftBottom</name>
+    <name>BoneRightBottom</name>
+  </boneListRotation>
+  <boneListMorphWeight>
+    <name>blink</name>
+    <name>speak</name>
+    <name>smile</name>
+    <!--<name>weird</name>-->
+    <name>rightfist</name>
+    <name>leftfist</name>
+  </boneListMorphWeight>
+  <animationList>
+    <file>cudaanimation/back.xml</file>
+    <file>cudaanimation/fall.xml</file>
+    <file>cudaanimation/fallback.xml</file>
+    <file>cudaanimation/hithigh.xml</file>
+    <file>cudaanimation/hitjump.xml</file>
+    <file>cudaanimation/hitlow.xml</file>
+    <file>cudaanimation/hitmed.xml</file>
+    <file>cudaanimation/idle.xml</file>
+    <file>cudaanimation/loosegame.xml</file>
+    <file>cudaanimation/loosepoint.xml</file>
+    <file>cudaanimation/looseserve.xml</file>
+    <file>cudaanimation/menu.xml</file>
+    <file>cudaanimation/run.xml</file>
+    <file>cudaanimation/serve.xml</file>
+    <file>cudaanimation/walk.xml</file>
+    <file>cudaanimation/wingame.xml</file>
+    <file>cudaanimation/winpoint.xml</file>
+    <file>cudaanimation/winserve.xml</file>
+  </animationList>
+</root>

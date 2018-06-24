@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/ParticleManagerPacker.xsd"
+      >
+  <arrayUvDataParticle>
+    <uvDataParticle>
+      <!--0 multi splater blud-->
+      <originX>0.750488</originX>
+      <originY>0.187988</originY>
+      <sizeX>0.061524</sizeX>
+      <sizeY>0.061524</sizeY>
+    </uvDataParticle>
+    <uvDataParticle>
+      <!--1 blob faint blud-->
+      <originX>0.750488</originX>
+      <originY>0.172363</originY>
+      <sizeX>0.014649</sizeX>
+      <sizeY>0.014649</sizeY>
+    </uvDataParticle>
+    <uvDataParticle>
+      <!--2 blob blud-->
+      <originX>0.766113</originX>
+      <originY>0.172363</originY>
+      <sizeX>0.014649</sizeX>
+      <sizeY>0.014649</sizeY>
+    </uvDataParticle>
+    <uvDataParticle>
+      <!--3 blob hard blud-->
+      <originX>0.781738</originX>
+      <originY>0.172363</originY>
+      <sizeX>0.014649</sizeX>
+      <sizeY>0.014649</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--4 garbage small -->
+      <originX>0.750244140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.01513671875</sizeX>
+      <sizeY>0.01513671875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--5 garbage small -->
+      <originX>0.765869140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.01513671875</sizeX>
+      <sizeY>0.01513671875</sizeY>
+    </uvDataParticle>    
+
+    <uvDataParticle>
+      <!--6 garbage small -->
+      <originX>0.781494140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.01513671875</sizeX>
+      <sizeY>0.01513671875</sizeY>
+    </uvDataParticle>  
+
+    <uvDataParticle>
+      <!--7 garbage small -->
+      <originX>0.797119140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.01513671875</sizeX>
+      <sizeY>0.01513671875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--8 garbage big -->
+      <originX>0.812744140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.03076171875</sizeX>
+      <sizeY>0.03076171875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--9 garbage big -->
+      <originX>0.843994140625</originX>
+      <originY>0.125244140625</originY>
+      <sizeX>0.03076171875</sizeX>
+      <sizeY>0.03076171875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--10 garbage big -->
+      <originX>0.812744140625</originX>
+      <originY>0.156494140625</originY>
+      <sizeX>0.03076171875</sizeX>
+      <sizeY>0.03076171875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--11 garbage big -->
+      <originX>0.843994140625</originX>
+      <originY>0.156494140625</originY>
+      <sizeX>0.03076171875</sizeX>
+      <sizeY>0.03076171875</sizeY>
+    </uvDataParticle>
+
+    <uvDataParticle>
+      <!--12 steam -->
+      <originX>0.812744140625</originX>
+      <originY>0.187744140625</originY>
+      <sizeX>0.06201171875</sizeX>
+      <sizeY>0.06201171875</sizeY>
+    </uvDataParticle>
+
+	</arrayUvDataParticle>
+  
+  <arrayUvDataLine>
+    <uvDataLine>
+      <!--0 line soft blud-->
+      <originX>0.750244140625</originX>
+      <originY>0.18798828125</originY>
+      <width>0.03076171875</width>
+      <heightTop>0.01123046875</heightTop>
+      <heightBody>0.03955078125</heightBody>
+      <heightBottom>0.01123046875</heightBottom>
+    </uvDataLine>
+    <uvDataLine>
+      <!--1 line hard blud-->
+      <originX>0.844238</originX>
+      <originY>0.187988</originY>
+      <width>0.030274</width>
+      <heightTop>0.014649</heightTop>
+      <heightBody>0.032226</heightBody>
+      <heightBottom>0.014649</heightBottom>
+    </uvDataLine>
+  </arrayUvDataLine>
+  
+  <arrayParticle>
+    <particle>
+      <!-- 0 flying line soft blud-->
+      <uvDataIndex>0</uvDataIndex>
+      <nextParticleIndex>3</nextParticleIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagLine>true</flagLine>
+      <flagUseGravity>true</flagUseGravity>
+      <flagSplatZeroY>true</flagSplatZeroY>
+    </particle>
+
+    <particle>
+      <!-- 1 stationary multi splater blud -->
+      <uvDataIndex>0</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagStationary>true</flagStationary>
+    </particle>
+    
+    <particle>
+      <!-- 2 flying faint blob -->
+      <uvDataIndex>1</uvDataIndex>
+      <nextParticleIndex>1</nextParticleIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagSplatZeroY>true</flagSplatZeroY>
+    </particle>
+
+    <particle>
+      <!-- 3 stationary faint blob -->
+      <uvDataIndex>1</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagStationary>true</flagStationary>
+    </particle>
+
+    <particle>
+      <!-- 4 flying blob -->
+      <uvDataIndex>2</uvDataIndex>
+      <nextParticleIndex>5</nextParticleIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagSplatZeroY>true</flagSplatZeroY>
+    </particle>
+
+    <particle>
+      <!-- 5 stationary blob -->
+      <uvDataIndex>2</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagStationary>true</flagStationary>
+    </particle>
+
+
+    <particle>
+      <!-- 6 garbage small -->
+      <uvDataIndex>4</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 7 garbage small -->
+      <uvDataIndex>5</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 8 garbage small -->
+      <uvDataIndex>6</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 9 garbage small -->
+      <uvDataIndex>7</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 10 garbage big -->
+      <uvDataIndex>8</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 11 garbage big -->
+      <uvDataIndex>8</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 12 garbage big -->
+      <uvDataIndex>8</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+    <particle>
+      <!-- 13 garbage big -->
+      <uvDataIndex>8</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagUseGravity>true</flagUseGravity>
+      <flagBounceZeroY>true</flagBounceZeroY>
+    </particle>
+
+    <particle>
+      <!-- 14 flying steam -->
+      <uvDataIndex>12</uvDataIndex>
+      <flagWorldSpace>true</flagWorldSpace>
+    </particle>
+		
+		
+  </arrayParticle>
+  
+  <arrayEmittor>
+    <emittor>
+      <!--0 blud spurt along x axis -->
+      <sourcePointX>0</sourcePointX>
+      <sourcePointY>0</sourcePointY>
+      <sourcePointZ>0</sourcePointZ>
+      <sourcePointDeltaX>0</sourcePointDeltaX>
+      <sourcePointDeltaY>0.05</sourcePointDeltaY>
+      <sourcePointDeltaZ>0.05</sourcePointDeltaZ>
+      <arrayData>
+        <emittorData>
+          <rate>20.0</rate>
+          <rateDelta>10.0</rateDelta>
+          <particleIndex>0</particleIndex>
+          <lifeSpan>2.0</lifeSpan>
+          <radiusStart>0.0025</radiusStart>
+          <radiusEnd>0.075</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>1.0</initialVelocityX>
+          <initialVelocityY>0.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>0.25</initialVelocityDeltaX>
+          <initialVelocityDeltaY>0.05</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>0.05</initialVelocityDeltaZ>
+        </emittorData>
+					
+      </arrayData>
+      <flagWorldSpace>true</flagWorldSpace>
+    </emittor>
+
+    <emittor>
+      <!--1 blud spurt all directions -->
+      <sourcePointX>0</sourcePointX>
+      <sourcePointY>0</sourcePointY>
+      <sourcePointZ>0</sourcePointZ>
+      <sourcePointDeltaX>0</sourcePointDeltaX>
+      <sourcePointDeltaY>0.02</sourcePointDeltaY>
+      <sourcePointDeltaZ>0.02</sourcePointDeltaZ>
+      <arrayData>
+        <emittorData>
+          <rate>20.0</rate>
+          <rateDelta>10.0</rateDelta>
+          <particleIndex>0</particleIndex>
+          <lifeSpan>2.0</lifeSpan>
+          <radiusStart>0.0025</radiusStart>
+          <radiusEnd>0.075</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>0.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>0.5</initialVelocityDeltaX>
+          <initialVelocityDeltaY>0.5</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>0.5</initialVelocityDeltaZ>
+        </emittorData>
+				
+      </arrayData>
+      <flagWorldSpace>true</flagWorldSpace>
+    </emittor>
+
+
+    <emittor>
+      <!--2 sudden blud spurt all directions (has duration) -->
+      <sourcePointX>0</sourcePointX>
+      <sourcePointY>0</sourcePointY>
+      <sourcePointZ>0</sourcePointZ>
+      <sourcePointDeltaX>0.02</sourcePointDeltaX>
+      <sourcePointDeltaY>0.02</sourcePointDeltaY>
+      <sourcePointDeltaZ>0.02</sourcePointDeltaZ>
+      <arrayData>
+        <emittorData>
+          <rate>64.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>0</particleIndex>
+          <lifeSpan>2.0</lifeSpan>
+          <radiusStart>0.001</radiusStart>
+          <radiusEnd>0.05</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>0.5</initialVelocityY>
+          <initialVelocityZ>-1.0</initialVelocityZ>
+          <initialVelocityDeltaX>1.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>1.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>1.0</initialVelocityDeltaZ>
+        </emittorData>
+      </arrayData>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagHasDuration>true</flagHasDuration>
+    </emittor>
+
+
+    <emittor>
+      <!--3 garbage all direction mostly up -->
+      <sourcePointX>0</sourcePointX>
+      <sourcePointY>0</sourcePointY>
+      <sourcePointZ>0</sourcePointZ>
+      <sourcePointDeltaX>0.02</sourcePointDeltaX>
+      <sourcePointDeltaY>0.02</sourcePointDeltaY>
+      <sourcePointDeltaZ>0.02</sourcePointDeltaZ>
+      <arrayData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>6</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.1</radiusStart>
+          <radiusEnd>0.1</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>4.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>2.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>2.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>2.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>7</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.1</radiusStart>
+          <radiusEnd>0.1</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>4.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>2.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>2.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>2.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>8</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.1</radiusStart>
+          <radiusEnd>0.1</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>4.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>2.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>2.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>2.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>9</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.1</radiusStart>
+          <radiusEnd>0.1</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>4.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>2.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>2.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>2.0</initialVelocityDeltaZ>
+        </emittorData>
+
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>10</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.25</radiusStart>
+          <radiusEnd>0.25</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>2.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>1.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>1.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>1.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>11</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.25</radiusStart>
+          <radiusEnd>0.25</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>2.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>1.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>1.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>1.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>12</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.25</radiusStart>
+          <radiusEnd>0.25</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>2.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>1.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>1.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>1.0</initialVelocityDeltaZ>
+        </emittorData>
+        <emittorData>
+          <rate>16.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>13</particleIndex>
+          <lifeSpan>5.0</lifeSpan>
+          <radiusStart>0.25</radiusStart>
+          <radiusEnd>0.25</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>2.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>1.0</initialVelocityDeltaX>
+          <initialVelocityDeltaY>1.0</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>1.0</initialVelocityDeltaZ>
+        </emittorData>
+      </arrayData>
+      <flagWorldSpace>true</flagWorldSpace>
+      <flagHasDuration>true</flagHasDuration>
+    </emittor>    
+    
+    <emittor>
+      <!--4 drip and steam -->
+      <sourcePointX>0</sourcePointX>
+      <sourcePointY>0</sourcePointY>
+      <sourcePointZ>0</sourcePointZ>
+      <sourcePointDeltaX>0.15</sourcePointDeltaX>
+      <sourcePointDeltaY>0.15</sourcePointDeltaY>
+      <sourcePointDeltaZ>0.15</sourcePointDeltaZ>
+      <arrayData>
+
+				<!-- green blob drip -->
+        <emittorData>
+          <rate>1.0</rate>
+          <rateDelta>1.0</rateDelta>
+          <particleIndex>0</particleIndex>
+          <lifeSpan>2.0</lifeSpan>
+          <radiusStart>0.01</radiusStart>
+          <radiusEnd>0.075</radiusEnd>
+          <alphaStart>1.0</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>0.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>0.25</initialVelocityDeltaX>
+          <initialVelocityDeltaY>0.25</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>0.25</initialVelocityDeltaZ>
+        </emittorData>
+				
+				<!-- steam -->				
+        <emittorData>
+          <rate>3.0</rate>
+          <rateDelta>0.0</rateDelta>
+          <particleIndex>14</particleIndex>
+          <lifeSpan>2.0</lifeSpan>
+          <radiusStart>0.1</radiusStart>
+          <radiusEnd>0.4</radiusEnd>
+          <alphaStart>0.15</alphaStart>
+          <alphaStartDelta>0.0</alphaStartDelta>
+          <alphaEnd>0.0</alphaEnd>
+          <alphaEndDelta>0.0</alphaEndDelta>
+          <initialVelocityX>0.0</initialVelocityX>
+          <initialVelocityY>0.0</initialVelocityY>
+          <initialVelocityZ>0.0</initialVelocityZ>
+          <initialVelocityDeltaX>0.05</initialVelocityDeltaX>
+          <initialVelocityDeltaY>0.05</initialVelocityDeltaY>
+          <initialVelocityDeltaZ>0.05</initialVelocityDeltaZ>
+        </emittorData>				
+      </arrayData>
+      <flagWorldSpace>true</flagWorldSpace>
+    </emittor>
+		
+  </arrayEmittor>
+</root>

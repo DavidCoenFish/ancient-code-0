@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/texturepacker.xsd"
+      >
+
+  <arrayTextureData>
+		
+    <textureData>
+      <textureFile>D:\development\zombie2\zombie2\art\texture\texture_00.tga</textureFile>
+      <textureAlphaFile>D:\development\zombie2\zombie2\art\texture\texture_00a.tga</textureAlphaFile>
+      <textureDataName>texture_00.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+    </textureData>
+		
+    <textureData>
+      <textureFile>D:\development\zombie2\zombie2\art\texture\texture_01.tga</textureFile>
+      <textureAlphaFile>D:\development\zombie2\zombie2\art\texture\texture_01a.tga</textureAlphaFile>
+      <textureDataName>texture_01.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+    </textureData>
+
+  </arrayTextureData>
+
+</root>

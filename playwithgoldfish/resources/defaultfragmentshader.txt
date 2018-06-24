@@ -1,0 +1,20 @@
+#version 100
+
+#ifdef GL_ES
+	#define LOWP lowp
+	#define MEDIUMP mediump
+	#define HIGHP highp
+#else
+	#define LOWP
+	#define MEDIUMP
+	#define HIGHP
+#endif
+
+varying LOWP vec4 v_color; //world space
+
+void main()
+{
+	//gl_FragColor = LOWP vec4(0.0, 0.5, 0.5, 1.0);
+	gl_FragColor = v_color;
+	//gl_FragColor.x = 1.0;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="boneListPosition" type="boneListType" minOccurs="0" />
+      <xsd:element name="boneListRotation" type="boneListType" minOccurs="0" />
+      <xsd:element name="boneListScale" type="boneListType" minOccurs="0" />
+      <xsd:element name="boneListNoteTrack" type="boneListType" minOccurs="0" />
+      <xsd:element name="boneListMorphWeight" type="boneListType" minOccurs="0" />
+      <xsd:element name="animationList" type="animationListType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="boneListType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="animationListType">
+    <xsd:sequence>
+      <xsd:element name="file" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

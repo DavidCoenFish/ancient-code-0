@@ -1,0 +1,42 @@
+#version 100
+
+#ifdef GL_ES
+	#define LOWP lowp
+	#define MEDIUMP mediump
+	#define HIGHP highp
+#else
+	#define LOWP
+	#define MEDIUMP
+	#define HIGHP
+#endif
+
+
+varying MEDIUMP vec3 v_position; //world space
+varying LOWP vec3 v_normal; //world space
+
+
+uniform sampler2D u_texture2d_0;
+uniform MEDIUMP vec3 u_cameraPosition; //worldspace camera position
+
+LOWP float GetRimLight(LOWP vec3 in_surfaceNormal, LOWP vec3 in_eyeToPositionNormal)
+{
+	LOWP float dotResult = min(1.0, 1.0 + dot(in_surfaceNormal, in_eyeToPositionNormal));
+	LOWP float dotResultTemp = dotResult * dotResult * dotResult * dotResult;
+	return dotResultTemp * 0.5;
+}
+
+void main()
+{
+	LOWP vec3 eyeToPositionNormal = normalize(v_position.xyz - u_cameraPosition.xyz);
+	LOWP vec3 nomalNorm = (v_normal.xyz);
+
+	LOWP vec3 nomalNormalReflect = (eyeToPositionNormal.xyz - (nomalNorm * (2.0 * dot(eyeToPositionNormal.xyz, nomalNorm.xyz))));
+
+	LOWP vec4 texel0 = texture2D(u_texture2d_0, ((nomalNormalReflect.xy * 0.99) * 0.5) + 0.5);
+
+	LOWP float rimLight = GetRimLight(nomalNorm, eyeToPositionNormal);
+	gl_FragColor.xyz = texel0.xyz + rimLight;
+
+	gl_FragColor.w = 1.0;
+
+}

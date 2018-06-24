@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/fontspliter.xsd"
+      >
+  <source>
+    <spaceWidth>22</spaceWidth>
+    <newLine>54</newLine>
+    <image>
+      <filePath>font\veranda_00.tga</filePath>
+      <charSequence>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890`~!@#$%^*()_+-=[]{};':,./?\|&#169;&#60;&#62;&#38;"</charSequence>
+      <baseLine>78</baseLine>
+    </image>
+  </source>
+
+  <destination>
+    <destinationPath>fontveranda\</destinationPath>
+    <tagetTexture>font.tga</tagetTexture>
+    <targetWidth>2048</targetWidth>
+    <targetHeight>2048</targetHeight>
+    <writeOriginX>642</writeOriginX>
+    <writeOriginY>0</writeOriginY>
+    <writeWidth>1406</writeWidth>
+    <writeHeight>512</writeHeight>
+  </destination>
+</root>

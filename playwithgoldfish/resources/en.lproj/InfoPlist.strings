@@ -1,0 +1,10 @@
+/* 
+   InfoPlist.strings
+   play-with-goldfish
+
+   Created by David Coen on 2011 01 22
+   Copyright 2010 Pleasure seeking morons. All rights reserved.
+ */
+
+
+"CFBundleDisplayName" = "Play with Goldfish";

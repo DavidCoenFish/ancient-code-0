@@ -1,0 +1,70 @@
+#version 100
+
+#ifdef GL_ES
+	#define LOWP lowp
+	#define MEDIUMP mediump
+	#define HIGHP highp
+#else
+	#define LOWP
+	#define MEDIUMP
+	#define HIGHP
+#endif
+
+
+varying MEDIUMP vec3 v_position; //world space
+varying LOWP vec2 v_uv0;
+varying LOWP vec3 v_normal; //world space
+varying LOWP vec4 v_tangent; //world space
+
+uniform sampler2D u_texture2d_0;
+uniform sampler2D u_texture2d_1;
+uniform sampler2D u_texture2d_2;
+uniform MEDIUMP vec3 u_cameraPosition; //worldspace camera position
+
+LOWP vec4 GetRimLight(LOWP vec3 in_surfaceNormal, LOWP vec3 in_eyeToPositionNormal)
+{
+	LOWP float dotResult = min(1.0, 1.0 + dot(in_surfaceNormal, in_eyeToPositionNormal));
+	LOWP float dotResultTemp = dotResult * dotResult * dotResult * 0.5;
+	return LOWP vec4(dotResultTemp, dotResultTemp, dotResultTemp, 1.0);
+}
+
+LOWP vec4 GetLightSum(LOWP vec3 in_surfaceNormal, LOWP vec3 in_surfaceNormalReflect)
+{
+	//pretend a light from above
+	LOWP float dotResultAboveLight = 1.0 - max(0.0, dot(in_surfaceNormal, vec3(0.0, -1.0, 0.0)));
+	LOWP float dotResultSpecular =  max(0.0, dot(in_surfaceNormalReflect, vec3(0.0, 1.0, 0.0)));
+	LOWP float dotResultSpecularTemp = dotResultSpecular * dotResultSpecular * 0.75;
+	
+	LOWP float resultLight = (dotResultAboveLight * 0.25) + 0.25 + dotResultSpecularTemp;
+	
+	return LOWP vec4(resultLight, resultLight, resultLight, 1.0);
+}
+
+void main()
+{
+	LOWP vec3 eyeToPositionNormal = normalize(v_position.xyz - u_cameraPosition.xyz);
+
+	LOWP vec3 nomalNorm = (v_normal.xyz);
+	LOWP vec3 tangentNorm = (v_tangent.xyz) * v_tangent.w;
+	LOWP vec4 texel0 = texture2D(u_texture2d_0, v_uv0); //diffuse map
+	LOWP vec4 texel1 = texture2D(u_texture2d_1, v_uv0); //normal map
+	LOWP vec3 texel1Normal = ((texel1.xyz * 2.0) - 1.0);
+	LOWP vec3 up = (cross(nomalNorm.xyz, tangentNorm.xyz));
+
+	LOWP vec3 surfaceNormal = (nomalNorm.xyz * texel1Normal.z) + (tangentNorm.xyz * texel1Normal.x) - (up.xyz * texel1Normal.y);
+
+	LOWP vec3 surfaceNormalReflect = (eyeToPositionNormal.xyz - (surfaceNormal * (2.0 * dot(eyeToPositionNormal.xyz, surfaceNormal.xyz))));
+
+	LOWP vec3 normalReflectTemp = nomalNorm * dot(eyeToPositionNormal.xyz, nomalNorm.xyz);
+	LOWP vec3 normalReflect = (eyeToPositionNormal.xyz - normalReflectTemp) - normalReflectTemp;
+
+	LOWP vec4 texel2 = texture2D(u_texture2d_2, ((normalReflect.xy * 0.99) * 0.5) + 0.5);
+	
+	LOWP vec4 rimLight = GetRimLight(nomalNorm, eyeToPositionNormal);
+	LOWP vec4 lightSum	= GetLightSum(surfaceNormal, surfaceNormalReflect);
+
+	gl_FragColor.xyz = ((rimLight.xyz + (texel0.xyz * lightSum.xyz)) * texel0.w) + (texel2.xyz * 0.1);
+
+	gl_FragColor.w = texel0.w;
+
+}

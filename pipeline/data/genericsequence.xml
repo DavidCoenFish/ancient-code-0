@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/missionpacker.xsd"
+      >
+  <mission>
+    
+   <name>generic</name>
+  <sequenceArray>
+    <sequence>
+      <name>death</name>
+      <stopAtEnd>true</stopAtEnd>
+      <key>
+        <time>0.0</time>
+        <dataFade>
+          <type>TFullScreenTransparentToBlack</type>
+          <transitionTime>3.0</transitionTime>
+        </dataFade>
+      </key>
+      <key>
+        <time>3.0</time>
+        <nop/>
+      </key>
+    </sequence>
+  </sequenceArray>
+  </mission>
+
+</root>

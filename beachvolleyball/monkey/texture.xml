@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      >
+	<textureDataArray>
+    <textureData>
+      <textureFile>D:\development\project\beachvolleyball\beachvolleyball\art\texture\texture.tga</textureFile>
+      <textureFile platform="ios">D:\development\project\beachvolleyball\beachvolleyball\art\texture\texture.pvr</textureFile>
+      <textureDataName>texture.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+
+    <textureData>
+      <textureFile>D:\development\project\beachvolleyball\beachvolleyball\art\texture\texturefree.tga</textureFile>
+      <textureFile platform="ios">D:\development\project\beachvolleyball\beachvolleyball\art\texture\texturefree.pvr</textureFile>
+      <textureDataName>texturefree.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+    
+    <textureData>
+      <textureFile>D:\development\project\beachvolleyball\beachvolleyball\art\texture\texture1024.tga</textureFile>
+      <textureFile platform="ios">D:\development\project\beachvolleyball\beachvolleyball\art\texture\texture1024.pvr</textureFile>
+      <textureDataName>texture1024.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+
+    <textureData>
+      <textureFile>D:\development\project\beachvolleyball\beachvolleyball\art\texture\texturefree1024.tga</textureFile>
+      <textureFile platform="ios">D:\development\project\beachvolleyball\beachvolleyball\art\texture\texturefree1024.pvr</textureFile>
+      <textureDataName>texturefree1024.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+    
+  </textureDataArray>
+</root>

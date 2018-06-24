@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="arrayUvDataParticle" type="arrayUvDataParticleType"/>
+      <xsd:element name="arrayUvDataLine" type="arrayUvDataLineType"/>
+      <xsd:element name="arrayParticle" type="arrayParticleType"/>
+      <xsd:element name="arrayEmittor" type="arrayEmittorType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayUvDataParticleType">
+    <xsd:sequence>
+      <xsd:element name="uvDataParticle" type="uvDataParticleType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="uvDataParticleType">
+    <xsd:sequence>
+      <xsd:element name="originX" type="xsd:float"/>
+      <xsd:element name="originY" type="xsd:float"/>
+      <xsd:element name="sizeX" type="xsd:float"/>
+      <xsd:element name="sizeY" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayUvDataLineType">
+    <xsd:sequence>
+      <xsd:element name="uvDataLine" type="uvDataLineType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="uvDataLineType">
+    <xsd:sequence>
+      <xsd:element name="originX" type="xsd:float"/>
+      <xsd:element name="originY" type="xsd:float"/>
+      <xsd:element name="width" type="xsd:float"/>
+      <xsd:element name="heightTop" type="xsd:float"/>
+      <xsd:element name="heightBody" type="xsd:float"/>
+      <xsd:element name="heightBottom" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayParticleType">
+    <xsd:sequence>
+      <xsd:element name="particle" type="particleType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="particleType">
+    <xsd:sequence>              
+      <xsd:element name="uvDataIndex" type="xsd:int"/>
+      <xsd:element name="duration" type="xsd:float" minOccurs="0"/>
+      <xsd:element name="nextParticleIndex" type="xsd:int" minOccurs="0"/>
+
+      <!--const int mFlag;-->
+      <xsd:element name="flagWorldSpace" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagStationary" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagLine" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagUseGravity" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagUseGravityWeak" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagUseAntiGravity" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagUseAntiGravityWeak" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagBounceZeroY" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagSplatZeroY" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagHasDuration" type="xsd:boolean" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayEmittorType">
+    <xsd:sequence>
+      <xsd:element name="emittor" type="emittorType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="emittorType">
+    <xsd:sequence>
+      <xsd:element name="sourcePointX" type="xsd:float"/>
+      <xsd:element name="sourcePointY" type="xsd:float"/>
+      <xsd:element name="sourcePointZ" type="xsd:float"/>
+      <xsd:element name="sourcePointDeltaX" type="xsd:float" minOccurs="0" />
+      <xsd:element name="sourcePointDeltaY" type="xsd:float" minOccurs="0" />
+      <xsd:element name="sourcePointDeltaZ" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="arrayData" type="arrayEmittorDataType"/>
+
+      <!--const int mFlag;-->
+      <xsd:element name="flagWorldSpace" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="flagHasDuration" type="xsd:boolean" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayEmittorDataType">
+    <xsd:sequence>
+      <xsd:element name="emittorData" type="emittorDataType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="emittorDataType">
+    <xsd:sequence>
+      <xsd:element name="rate" type="xsd:float"/>
+      <xsd:element name="rateDelta" type="xsd:float"/>
+      <xsd:element name="particleIndex" type="xsd:int"/>
+
+      <xsd:element name="lifeSpan" type="xsd:float"/>
+      <xsd:element name="lifeSpanDelta" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="radiusStart" type="xsd:float"/>
+      <xsd:element name="radiusStartDelta" type="xsd:float" minOccurs="0" />
+      <xsd:element name="radiusEnd" type="xsd:float"/>
+      <xsd:element name="radiusEndDelta" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="alphaStart" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alphaStartDelta" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alphaEnd" type="xsd:float" minOccurs="0" />
+      <xsd:element name="alphaEndDelta" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="initialVelocityX" type="xsd:float" minOccurs="0" />
+      <xsd:element name="initialVelocityY" type="xsd:float" minOccurs="0" />
+      <xsd:element name="initialVelocityZ" type="xsd:float" minOccurs="0" />
+      <xsd:element name="initialVelocityDeltaX" type="xsd:float" minOccurs="0" />
+      <xsd:element name="initialVelocityDeltaY" type="xsd:float" minOccurs="0" />
+      <xsd:element name="initialVelocityDeltaZ" type="xsd:float" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

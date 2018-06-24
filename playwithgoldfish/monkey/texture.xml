@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      >
+	<textureDataArray>
+		<textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\whitediffusebody.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\whitediffusebody.pvr</textureFile>
+      <textureDataName>whitediffusebody.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\golddiffusebody.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\golddiffusebody.pvr</textureFile>
+      <textureDataName>golddiffusebody.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\orangediffusebody.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\orangediffusebody.pvr</textureFile>
+      <textureDataName>orangediffusebody.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\whitediffusefin.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\whitediffusefin.pvr</textureFile>
+      <textureDataName>whitediffusefin.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\golddiffusefin.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\golddiffusefin.pvr</textureFile>
+      <textureDataName>golddiffusefin.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\orangediffusefin.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\orangediffusefin.pvr</textureFile>
+      <textureDataName>orangediffusefin.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>    
+    
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\bodynormal_00.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\bodynormal_00.pvr</textureFile>
+      <textureDataName>bodynormal_00.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\finnormal_00.tga</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\finnormal_00.pvr</textureFile>
+      <textureDataName>finnormal_00.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+
+    <textureData>
+			<textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\chromereflect.png</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\chromereflect.pvr</textureFile>
+      <textureDataName>chromereflect.data</textureDataName>
+			<textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\chromereflect_20.png</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\chromereflect_20.pvr</textureFile>
+      <textureDataName>chromereflect_20.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+
+    <textureData>
+      <textureFile>d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\brycereflect.png</textureFile>
+      <textureFile platform="ios">d:\development\project\playwithgoldfish\playwithgoldfish\art\vertail\texture\brycereflect.pvr</textureFile>
+      <textureDataName>brycereflect.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgb</textureDestinationType>
+    </textureData>
+
+  </textureDataArray>
+</root>

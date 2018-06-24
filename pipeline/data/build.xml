@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root version="0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/Monkey.xsd"
+      >
+  <pathList>
+    <base>
+      <name>Tools</name>
+      <pathAbsolute>D:\development\project\tools\pipeline\bin\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Home</name>
+      <pathAbsolute>D:\development\project\tools\pipeline\data\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>3dStudioMax</name>
+      <pathAbsolute>D:\Program Files\Autodesk\3ds Max 9\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Source</name>
+      <pathRelative baseName="Home">Source\</pathRelative>
+    </base>
+
+    <base>
+      <name>Output</name>
+      <pathAbsolute>D:\development\project\modelviewer\modelviewer\resources</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Temp</name>
+      <pathRelative baseName="Home">Temp\</pathRelative>
+    </base>
+  </pathList>
+  
+  <builderList>
+    <builderCommandLine>
+      <sourceType>FudgePackerSource</sourceType>
+      <destinationType>FudgePackerOutput</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FudgePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>TexturePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">TexturePacker.exe</filePathRelative>
+      </executablePath>
+      <useDataId>true</useDataId>
+      <usePlatform>true</usePlatform>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>MaterialPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MaterialPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>GeometryPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">GeometryPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>AnimationPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>AnimationStatePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationStatePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>ScenePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">ScenePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Material</sourceType>
+      <destinationType>MaterialPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMaterialExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Geometry</sourceType>
+      <destinationType>GeometryPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMeshExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09SceneGraph</sourceType>
+      <destinationType>ScenePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscSceneGraphExport</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09SceneGraph</sourceType>
+      <destinationType>AnimationSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscAnimationExportExternal</functionName>
+    </builderMax>
+    
+  </builderList>
+  
+  <actionList>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">fudgepackertest.xml</filePathRelative>
+        <type>FudgePackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Home">fudgepackertest.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">maxscenegraph.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scenegraph.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <!--<filePathRelative baseName="Home">maxtext_00.max</filePathRelative>-->
+        <filePathRelative baseName="Home">skintest.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialtest0</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Home">materialtest0.xml</filePathRelative>
+        <type>MaterialPackerSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">materialtest0.xml</filePathRelative>
+        <type>MaterialPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialtest0.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <!--<filePathRelative baseName="Home">maxtext_00.max</filePathRelative>-->
+        <filePathRelative baseName="Home">skintest.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>materialtest0</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">geometrytest0.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">axes2.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>axes</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">axes_geometry.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">axes2.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>01 - Default</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">axes_material.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+  </actionList>
+</root>

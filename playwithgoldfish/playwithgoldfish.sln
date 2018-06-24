@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playwithgoldfish", "playwithgoldfish.vcproj", "{C73A1591-CBD3-4699-AA3D-910B11EDC9CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3B1750E7-14AC-4891-AA80-C1D7F4F2D127} = {3B1750E7-14AC-4891-AA80-C1D7F4F2D127}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Monkey", "..\pipeline\monkey\monkey.vcproj", "{080ED232-848D-4937-ACFD-7E3B708F4C78}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GCommon", "..\gcommon\gcommon.vcproj", "{3B1750E7-14AC-4891-AA80-C1D7F4F2D127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C73A1591-CBD3-4699-AA3D-910B11EDC9CD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C73A1591-CBD3-4699-AA3D-910B11EDC9CD}.Debug|Win32.Build.0 = Debug|Win32
+		{C73A1591-CBD3-4699-AA3D-910B11EDC9CD}.Release|Win32.ActiveCfg = Release|Win32
+		{C73A1591-CBD3-4699-AA3D-910B11EDC9CD}.Release|Win32.Build.0 = Release|Win32
+		{080ED232-848D-4937-ACFD-7E3B708F4C78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{080ED232-848D-4937-ACFD-7E3B708F4C78}.Release|Win32.ActiveCfg = Release|Win32
+		{3B1750E7-14AC-4891-AA80-C1D7F4F2D127}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B1750E7-14AC-4891-AA80-C1D7F4F2D127}.Debug|Win32.Build.0 = Debug|Win32
+		{3B1750E7-14AC-4891-AA80-C1D7F4F2D127}.Release|Win32.ActiveCfg = Release|Win32
+		{3B1750E7-14AC-4891-AA80-C1D7F4F2D127}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

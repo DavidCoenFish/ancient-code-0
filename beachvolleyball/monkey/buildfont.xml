@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root version="0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/Monkey.xsd"
+      >
+  <pathList>
+    <base>
+      <name>Tools</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\pipeline\bin\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>3dStudioMax</name>
+      <pathAbsolute>D:\Program Files\Autodesk\3ds Max 9\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Construction</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\construction\</pathAbsolute>
+    </base>    
+    
+    <base>
+      <name>Home</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Working</name>
+      <pathRelative baseName="Home">beachvolleyball\monkey\</pathRelative>
+    </base>
+    
+    <base>
+      <name>Output</name>
+      <pathRelative baseName="Home">beachvolleyball\resources\</pathRelative>
+    </base>
+
+    <base>
+      <name>Temp</name>
+      <pathRelative baseName="Home">beachvolleyball\monkey\temp\</pathRelative>
+    </base>
+  </pathList>
+  
+  <builderList>
+    <builderCommandLine>
+      <sourceType>FudgePackerSource</sourceType>
+      <destinationType>FudgePackerOutput</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FudgePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+
+    <builderCommandLine>
+      <sourceType>FontPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FontPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+
+    <builderCommandLine>
+      <sourceType>FontSpliterSource</sourceType>
+      <destinationType>FontPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FontSpliter.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+        
+  </builderList>
+  
+  <actionList>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">fontcourier.xml</filePathRelative>
+        <type>FontSpliterSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">fontcouriersplit.xml</filePathRelative>
+        <type>FontPackerSource</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Working">fontcourier\fontcourier.tga</filePathRelative>
+      </dependancy>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">fontcouriersplit.xml</filePathRelative>
+        <type>FontPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">fontcourier.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    </actionList>
+</root>

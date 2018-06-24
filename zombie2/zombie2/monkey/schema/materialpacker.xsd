@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:simpleType name="blendModeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TZero"/>
+      <xsd:enumeration value="TOne"/>
+      <xsd:enumeration value="TSrcColor"/>
+      <xsd:enumeration value="TOneMinusSrcColor"/>
+      <xsd:enumeration value="TDstColor"/>
+      <xsd:enumeration value="TOneMinusDstColor"/>
+      <xsd:enumeration value="TSrcAlpha"/>
+      <xsd:enumeration value="TOneMinusSrcAlpha"/>
+      <xsd:enumeration value="TDstAlpha"/>
+      <xsd:enumeration value="TOneMinusDstAlpha"/>
+      <xsd:enumeration value="TSrcAlphaSaturate"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="faceCW" type="xsd:boolean"/>
+      <xsd:element name="faceCull" type="xsd:boolean"/>
+      <xsd:element name="colourWrite" type="xsd:boolean"/>
+
+      <xsd:element name="textureDataName" type="xsd:string"/>
+      <xsd:element name="useTexture" type="xsd:boolean"/>
+      <xsd:element name="red" type="xsd:float"/>
+      <xsd:element name="green" type="xsd:float"/>
+      <xsd:element name="blue" type="xsd:float"/>
+      <xsd:element name="alpha" type="xsd:float"/>
+      <xsd:element name="alphaBlend" type="xsd:boolean"/>
+      <xsd:element name="blendModeSrc" type="blendModeEnum"/>
+      <xsd:element name="blendModeDst" type="blendModeEnum"/>
+      
+      <xsd:element name="depthRead" type="xsd:boolean"/>
+      <xsd:element name="depthWrite" type="xsd:boolean"/>
+
+      <xsd:element name="stencilShadowFront" type="xsd:boolean"/>
+      <xsd:element name="stencilShadowBack" type="xsd:boolean"/>
+      <xsd:element name="stencilShadow" type="xsd:boolean"/>
+
+      <xsd:element name="useLighting" type="xsd:boolean"/>
+      
+      <xsd:element name="doBasePass" type="xsd:boolean"/>
+      <xsd:element name="doEnvironmentPass" type="xsd:boolean"/>
+      <xsd:element name="environmentUVTile" type="xsd:int"/>
+      <xsd:element name="environmentUVIndex" type="xsd:int"/>
+      
+      <xsd:element name="vertexFileName" type="xsd:string"/>
+      <xsd:element name="fragmentFileName" type="xsd:string"/>
+      
+      <xsd:element name="attributeNameArray" type="stringArrayType"/>
+      <xsd:element name="uniformNameArray" type="stringArrayType"/> 
+      
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:int"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="stringArrayType">
+    <xsd:sequence>
+      <xsd:element name="item" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

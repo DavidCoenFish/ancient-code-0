@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root version="0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/Monkey.xsd"
+      >
+  <pathList>
+    <base>
+      <name>Tools</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\pipeline\bin\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>3dStudioMax</name>
+      <pathAbsolute>D:\Program Files\Autodesk\3ds Max 9\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Construction</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\construction\</pathAbsolute>
+    </base>    
+    
+    <base>
+      <name>Home</name>
+      <pathAbsolute>D:\development\project\beachvolleyball\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Working</name>
+      <pathRelative baseName="Home">beachvolleyball\monkey\</pathRelative>
+    </base>
+    
+    <base>
+      <name>Output</name>
+      <pathRelative baseName="Home">beachvolleyball\resources\</pathRelative>
+    </base>
+
+    <base>
+      <name>Temp</name>
+      <pathRelative baseName="Home">beachvolleyball\monkey\temp\</pathRelative>
+    </base>
+  </pathList>
+  
+  <builderList>
+    <builderCommandLine>
+      <sourceType>FudgePackerSource</sourceType>
+      <destinationType>FudgePackerOutput</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FudgePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>TexturePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">TexturePacker.exe</filePathRelative>
+      </executablePath>
+      <useDataId>true</useDataId>
+      <usePlatform>true</usePlatform>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>MaterialPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MaterialPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>GeometryPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">GeometryPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>GuiPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">GuiPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>SkeletonPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">SkeletonPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>AnimationPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>AnimationStatePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationStatePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>ScenePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">ScenePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>MaterialGroupPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MaterialGroupPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>MissionMasterPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MissionPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+    <builderCommandLine>
+      <sourceType>ParticleManagerPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">ParticleManagerPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>   
+    
+    <builderMax>
+      <sourceType>3dStudioMax09Material</sourceType>
+      <destinationType>MaterialPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMaterialExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Geometry</sourceType>
+      <destinationType>GeometryPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMeshExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Gui</sourceType>
+      <destinationType>GuiPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscGuiExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Skeleton</sourceType>
+      <destinationType>SkeletonPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscSkeletonExportArrayName</functionName>
+    </builderMax>
+    
+    <builderMax>
+      <sourceType>3dStudioMax09SceneGraph</sourceType>
+      <destinationType>ScenePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscSceneGraphExport</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Animation</sourceType>
+      <destinationType>AnimationSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscAnimationExportExternal</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Mission</sourceType>
+      <destinationType>MissionSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMissionExportName</functionName>
+    </builderMax>
+    
+  </builderList>
+  
+  <actionList>
+
+    <!-- geometry scene -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\beach\max\beach.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshsky</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshsky.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\beach\max\beach.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshbeach</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshbeach.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\beach\max\beach.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshbeachtrim</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshbeachtrim.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <!-- geometry character -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\ball\max\ball.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshball</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshball.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\max\april.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshapril</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshapril.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>  
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\max\april.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshapriltop</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshapriltop.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\max\april.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshapriltopbottom</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshapriltopbottom.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>    
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\max\bikini.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshbikini</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshbikini.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\max\bikini.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshbikinitop</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshbikinitop.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\max\bikini.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshbikinitopbottom</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshbikinitopbottom.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\max\cuda.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshcuda</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshcuda.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\max\cuda.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshcudatop</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshcudatop.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\max\cuda.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshcudatopbottom</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshcudatopbottom.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\max\cuda.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshcudahair</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshcudahair.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\max\reiko.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshreiko</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshreiko.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>       
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\max\reiko.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshreikotop</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshreikotop.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\max\reiko.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshreikotopbottom</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshreikotopbottom.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\max\reiko.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>meshreikohair</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">meshreikohair.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>      
+    
+    <!-- skeleton -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\max\cuda.max</filePathRelative>
+        <type>3dStudioMax09Skeleton</type>
+        <dataId>Bip01 BoneBall meshcuda</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">skeletoncuda.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\max\april.max</filePathRelative>
+        <type>3dStudioMax09Skeleton</type>
+        <dataId>Bip01 BoneBall meshapril</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">skeletonapril.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\max\bikini.max</filePathRelative>
+        <type>3dStudioMax09Skeleton</type>
+        <dataId>Bip01 BoneBall meshbikini</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">skeletonbikini.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\max\reiko.max</filePathRelative>
+        <type>3dStudioMax09Skeleton</type>
+        <dataId>Bip01 BoneBall meshreiko</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">skeletonreiko.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <!-- animation april -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\back.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\back.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\fall.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 70 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\fall.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\fallback.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 75 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\fallback.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\hithigh.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\hithigh.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\hitjump.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 25 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\hitjump.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\hitlow.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\hitlow.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\hitmed.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\hitmed.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\loosegame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\loosegame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\loosepoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\loosepoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\looseserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\looseserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\menu.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\menu.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\run.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 10 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\run.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\serve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\serve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\walk.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\walk.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\wingame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\wingame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\winpoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\winpoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\april\animation\winserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">aprilanimation\winserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <!-- animation bikini -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\back.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\back.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\fall.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 70 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\fall.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\fallback.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 75 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\fallback.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\hithigh.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\hithigh.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\hitjump.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 25 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\hitjump.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\hitlow.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\hitlow.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\hitmed.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\hitmed.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>    
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\loosegame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\loosegame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\loosepoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\loosepoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\looseserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\looseserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\menu.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\menu.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\run.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 10 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\run.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\serve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\serve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\walk.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\walk.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\wingame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\wingame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\winpoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\winpoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\bikini\animation\winserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">bikinianimation\winserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <!-- animation cuda -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\back.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\back.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\fall.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 70 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\fall.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\fallback.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 75 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\fallback.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\hithigh.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\hithigh.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\hitjump.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 25 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\hitjump.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\hitlow.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\hitlow.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\hitmed.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\hitmed.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\loosegame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\loosegame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\loosepoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\loosepoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\looseserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\looseserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\menu.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\menu.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\run.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 10 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\run.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\serve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\serve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\walk.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\walk.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\wingame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\wingame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\winpoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\winpoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\cuda\animation\winserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">cudaanimation\winserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <!-- animation reiko -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\back.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\back.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\fall.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 70 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\fall.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\fallback.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 75 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\fallback.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\hithigh.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\hithigh.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\hitjump.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 25 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\hitjump.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\hitlow.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\hitlow.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\hitmed.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\hitmed.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\loosegame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\loosegame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\loosepoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\loosepoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\looseserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\looseserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\menu.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\menu.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\run.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 10 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\run.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\serve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\serve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\walk.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\walk.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\wingame.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\wingame.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\winpoint.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\winpoint.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\reiko\animation\winserve.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">reikoanimation\winserve.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <!-- animation master-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">cudaanimationmaster.xml</filePathRelative>
+        <type>AnimationPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">animationcuda.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/back.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/fall.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/fallback.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/hithigh.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/hitjump.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/hitlow.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/hitmed.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/loosegame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/loosepoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/looseserve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/menu.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/run.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/serve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/walk.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/wingame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/winpoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">cudaanimation/winserve.xml</filePathRelative>
+      </dependancy>
+
+    </action>  
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">aprilanimationmaster.xml</filePathRelative>
+        <type>AnimationPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">animationapril.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/back.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/fall.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/fallback.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/hithigh.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/hitjump.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/hitlow.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/hitmed.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/loosegame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/loosepoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/looseserve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/menu.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/run.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/serve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/walk.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/wingame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/winpoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">aprilanimation/winserve.xml</filePathRelative>
+      </dependancy>
+
+    </action>    
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">bikinianimationmaster.xml</filePathRelative>
+        <type>AnimationPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">animationbikini.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/back.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/fall.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/fallback.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/hithigh.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/hitjump.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/hitlow.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/hitmed.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/loosegame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/loosepoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/looseserve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/menu.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/run.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/serve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/walk.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/wingame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/winpoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">bikinianimation/winserve.xml</filePathRelative>
+      </dependancy>
+    
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">reikoanimationmaster.xml</filePathRelative>
+        <type>AnimationPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">animationreiko.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/back.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/fall.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/fallback.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/hithigh.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/hitjump.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/hitlow.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/hitmed.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/loosegame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/loosepoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/looseserve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/menu.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/run.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/serve.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/walk.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/wingame.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/winpoint.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">reikoanimation/winserve.xml</filePathRelative>
+      </dependancy>
+      
+    </action>
+    
+    <!-- material -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialcharacter</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialcharacter.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialcharacteralpha</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialcharacteralpha.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialball</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialball.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialground</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialground.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>materialgroundalpha</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">materialgroundalpha.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+      
+    <!-- texture --> 
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texture.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texture.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\texture.tga</filePathRelative>
+      </dependancy>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texture1024.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texture1024.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\texture1024.tga</filePathRelative>
+      </dependancy>
+    </action>
+
+    <!--<action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texturefree.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texturefree.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\texturefree.tga</filePathRelative>
+      </dependancy>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texturefree1024.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texturefree1024.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">beachvolleyball\art\texture\texturefree1024.tga</filePathRelative>
+      </dependancy>
+    </action>-->
+    
+    <!--scene graph-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\scene\max\scene.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\scene\max\factory.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">factory.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>    
+    
+    <!--ParticleManagerPackerSource-->
+    <!--<action>
+      <sourceFile>
+        <filePathRelative baseName="Working">particlemanager.xml</filePathRelative>
+        <type>ParticleManagerPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">particlemanager.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>-->
+
+    <!--gui -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guilogo</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guilogo.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guimain</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guimain.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guimain2</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guimain2.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guiinfo</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guiinfo.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>    
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guiinfofree</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guiinfofree.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>   
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guiinfothanks</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guiinfothanks.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>  
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guiscore</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guiscore.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">beachvolleyball\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>guiwatch</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">guiwatch.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>    
+    
+    <!-- axes geometry and material -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Construction">max\axes.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>axes</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">axes_geometry.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Construction">max\axes.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>axesmaterial</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">axes_material.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+  
+</actionList>
+</root>

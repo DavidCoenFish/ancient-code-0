@@ -1,0 +1,23 @@
+#version 100
+
+#ifdef GL_ES
+	#define LOWP lowp
+	#define MEDIUMP mediump
+	#define HIGHP highp
+#else
+	#define LOWP
+	#define MEDIUMP
+	#define HIGHP
+#endif
+
+varying LOWP vec2 v_uv0;
+varying LOWP vec3 v_normal;
+
+uniform sampler2D u_texture2d_0;
+
+void main()
+{
+	gl_FragColor = texture2D(u_texture2d_0, v_uv0); //diffuse map
+	LOWP float light0 = (0.25 * max(0.0, dot(v_normal, vec3(0.4, 0.9, 0.4))));
+	gl_FragColor.xyz += vec3(light0, light0, light0);
+}

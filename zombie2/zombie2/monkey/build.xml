@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root version="0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/Monkey.xsd"
+      >
+  <pathList>
+    <base>
+      <name>Tools</name>
+      <pathAbsolute>D:\development\zombie2\pipeline\bin\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>3dStudioMax</name>
+      <pathAbsolute>D:\programs\Autodesk\3ds Max 9\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Home</name>
+      <pathAbsolute>D:\development\zombie2\</pathAbsolute>
+    </base>
+
+    <base>
+      <name>Working</name>
+      <pathRelative baseName="Home">zombie2\monkey\</pathRelative>
+    </base>
+    
+    <base>
+      <name>Output</name>
+      <pathRelative baseName="Home">zombie2\resources\</pathRelative>
+    </base>
+
+    <base>
+      <name>Temp</name>
+      <pathRelative baseName="Home">zombie2\monkey\temp\</pathRelative>
+    </base>
+  </pathList>
+  
+  <builderList>
+    <builderCommandLine>
+      <sourceType>FudgePackerSource</sourceType>
+      <destinationType>FudgePackerOutput</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FudgePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>FontPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FontPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+
+    <builderCommandLine>
+      <sourceType>FontSpliterSource</sourceType>
+      <destinationType>FontPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">FontSpliter.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>		
+    <builderCommandLine>
+      <sourceType>TexturePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">TexturePacker.exe</filePathRelative>
+      </executablePath>
+      <useDataId>true</useDataId>
+      <usePlatform>true</usePlatform>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>MaterialPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MaterialPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>GeometryPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">GeometryPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>GuiPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">GuiPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>SkeletonPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">SkeletonPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>AnimationPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>AnimationStatePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">AnimationStatePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>ScenePackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">ScenePacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>MaterialGroupPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MaterialGroupPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>MissionMasterPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">MissionPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>
+		
+    <builderCommandLine>
+      <sourceType>ParticleManagerPackerSource</sourceType>
+      <destinationType>FudgePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="Tools">ParticleManagerPacker.exe</filePathRelative>
+      </executablePath>
+    </builderCommandLine>   
+    
+    <builderMax>
+      <sourceType>3dStudioMax09Material</sourceType>
+      <destinationType>MaterialPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMaterialExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Geometry</sourceType>
+      <destinationType>GeometryPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMeshExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Gui</sourceType>
+      <destinationType>GuiPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscGuiExportName</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Skeleton</sourceType>
+      <destinationType>SkeletonPackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscSkeletonExportArrayName</functionName>
+    </builderMax>
+    
+    <builderMax>
+      <sourceType>3dStudioMax09SceneGraph</sourceType>
+      <destinationType>ScenePackerSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscSceneGraphExport</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Animation</sourceType>
+      <destinationType>AnimationSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscAnimationExportExternal</functionName>
+    </builderMax>
+
+    <builderMax>
+      <sourceType>3dStudioMax09Mission</sourceType>
+      <destinationType>MissionSource</destinationType>
+      <executablePath>
+        <filePathRelative baseName="3dStudioMax">3dsmax.exe</filePathRelative>
+      </executablePath>
+      <functionName>fDscMissionExportName</functionName>
+    </builderMax>
+    
+  </builderList>
+  
+  <actionList>
+		
+    <!-- geometry scene -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>bin00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">bin00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>bin01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">bin01.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>bin02</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">bin02.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>bin03</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">bin03.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>garbage00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">garbage00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\props.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>garbage01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">garbage01.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sky_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>skymesh</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">skymesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene00mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene01mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh02</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene02mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh03</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene03mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh04</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene04mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh05</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene05mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh06</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene06mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh07</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene07mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh08</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene08mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh09</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene09mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh10</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene10mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneall_mesh.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>scenemesh11</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene11mesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+		
+    <!--ParticleManagerPackerSource-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">particlemanager.xml</filePathRelative>
+        <type>ParticleManagerPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">particlemanager.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+		<!-- gui  -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>gui_splash00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">gui_splash00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\gui\max\gui.max</filePathRelative>
+        <type>3dStudioMax09Gui</type>
+        <dataId>gui_main</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">gui_main.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <!-- geometry -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\shadow\max\shadow.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>shadowmesh</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">shadowmesh.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+		<action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneheadhair</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneheadhair.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonehead</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonehead.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonejaw</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonejaw.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerighttorso</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerighttorso.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerightarm</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerightarm.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerighthand</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerighthand.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>			
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerighthanddamaged</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerighthanddamaged.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerightwaist</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerightwaist.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerighthip</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerighthip.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerighthip</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerighthip.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerightknee</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerightknee.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerightfoot</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerightfoot.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonerightfootdamaged</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonerightfootdamaged.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonelefttorso</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonelefttorso.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneleftarm</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneleftarm.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonelefthand</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonelefthand.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonelefthanddamaged</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonelefthanddamaged.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneleftwaist</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneleftwaist.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieonelefthip</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieonelefthip.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneleftknee</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneleftknee.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneleftfoot</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneleftfoot.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Geometry</type>
+        <dataId>zombieoneleftfootdamaged</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneleftfootdamaged.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <!-- skeleton -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\max\zombieone.max</filePathRelative>
+        <type>3dStudioMax09Skeleton</type>
+        <dataId>Bip01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneskeleton.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <!-- scene -->		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\factoryscene.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">factoryscene.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>  
+		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scenetest.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scenetest.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\sceneskybox.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">sceneskybox.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+  
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene00.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene01.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene01.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene02.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene02.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene03.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene03.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene04.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene04.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene05.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene05.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene06.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene06.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene07.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene07.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene08.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene08.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene09.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene09.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene10.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene10.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene11.max</filePathRelative>
+        <type>3dStudioMax09SceneGraph</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">scene11.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+    
+    <!-- mission -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene00.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene00.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene01.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene01.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene02.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene02</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene02.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene03.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene03</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene03.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene04.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene04</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene04.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene05.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene05</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene05.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene06.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene06</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene06.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene07.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene07</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene07.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene08.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene08</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene08.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene09.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene09</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene09.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene10.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene10</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene10.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scene11.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscene11</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscene11.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scenedebug00.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscenedebug00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscenedebug00.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scenedebug01.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscenedebug01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscenedebug01.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scenedebug02.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscenedebug02</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscenedebug02.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\scene\max\scenedebug03.max</filePathRelative>
+        <type>3dStudioMax09Mission</type>
+        <dataId>missionscenedebug03</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">mission\missionscenedebug03.xml</filePathRelative>
+        <type>MissionSource</type>
+      </destinationFile>
+    </action>
+
+		<!-- material -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_character00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_character00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_character00a</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_character00a.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_particle00a</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_particle00a.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_scene00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_scene00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>	
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_scene01</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_scene01.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_sky00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_sky00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>			
+		
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\material\max\material.max</filePathRelative>
+        <type>3dStudioMax09Material</type>
+        <dataId>material_shadow00</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">material_shadow00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>			
+		
+    <!-- texture -->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texture_00.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texture_00.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">zombie2\art\texture\texture_00.tga</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Home">zombie2\art\texture\texture_00a.tga</filePathRelative>
+      </dependancy>
+    </action>		
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">texture.xml</filePathRelative>
+        <type>TexturePackerSource</type>
+        <dataId>texture_01.data</dataId>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">texture_01.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">zombie2\art\texture\texture_01.tga</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Home">zombie2\art\texture\texture_01a.tga</filePathRelative>
+      </dependancy>
+    </action>		
+
+		
+    <!-- animation zombieone-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_death.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 false 1.0</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\death.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action> 
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 20 true 0.8</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>  
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_walk.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 30 true 0.85</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\walk.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_hop_left.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 true 0.7</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\hop_left.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_hop_right.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 true 0.7</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\hop_right.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_recoil.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 10 false 1.0</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\recoil.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_attack_left.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 false 1.0</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\attack_left.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_attack_right.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 false 1.0</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\attack_right.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_attack_bite.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 false 1.0</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\attack_bite.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_idle.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+        <dataId>0 15 true 0.75</dataId>				
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_idle.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>   
+    
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 30 true 0.8</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_left.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 30 true 0.9</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_left.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_right.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 30 true 0.9</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_right.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_recoil.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 10 false 1.0</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_recoil.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_attack_left.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 15 false 1.0</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_attack_left.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_attack_right.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 15 false 1.0</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_attack_right.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Home">zombie2\art\zombieone\animation\zombieone_drag_attack_bite.max</filePathRelative>
+        <type>3dStudioMax09Animation</type>
+				<dataId>0 15 false 1.0</dataId>		
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">zombieoneanimation\drag_attack_bite.xml</filePathRelative>
+        <type>AnimationSource</type>
+      </destinationFile>
+    </action>
+		
+		
+    <!-- animation master zombieone-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">zombieoneanimationmaster.xml</filePathRelative>
+        <type>AnimationPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">zombieoneanimation.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/death.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/walk.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/hop_left.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/hop_right.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/recoil.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/attack_left.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/attack_right.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/attack_bite.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_idle.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_left.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_right.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_recoil.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_attack_left.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_attack_right.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">zombieoneanimation/drag_attack_bite.xml</filePathRelative>
+      </dependancy>
+    </action>
+		
+		
+    <!-- mission master-->
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">missionmaster.xml</filePathRelative>
+        <type>MissionMasterPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">mission.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionintro.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene00.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene01.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene02.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene03.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene04.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene05.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene06.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene07.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene08.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene09.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene10.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscene11.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscenedebug00.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscenedebug01.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscenedebug02.xml</filePathRelative>
+      </dependancy>
+      <dependancy>
+        <filePathRelative baseName="Working">mission\missionscenedebug03.xml</filePathRelative>
+      </dependancy>
+    </action>
+		
+    <!-- font-->
+		<action>
+      <sourceFile>
+        <filePathRelative baseName="Working">fontverdana.xml</filePathRelative>
+        <type>FontSpliterSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Working">fontverdanasplit.xml</filePathRelative>
+        <type>FontPackerSource</type>
+      </destinationFile>
+      <dependancy>
+        <filePathRelative baseName="Home">zombie2\monkey\font\veranda_00.tga</filePathRelative>
+      </dependancy>
+    </action>
+
+    <action>
+      <sourceFile>
+        <filePathRelative baseName="Working">fontverdanasplit.xml</filePathRelative>
+        <type>FontPackerSource</type>
+      </sourceFile>
+      <destinationFile>
+        <filePathRelative baseName="Output">fontverdana.data</filePathRelative>
+        <type>FudgePackerOutput</type>
+      </destinationFile>
+    </action>		
+		
+  </actionList>
+</root>

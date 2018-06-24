@@ -1,0 +1,73 @@
+/* 
+   Localizable.strings
+   playwithgoldfish
+
+   Created by David Coen on 24/01/11.
+   Copyright 2011 Pleasure seeking morons. All rights reserved.
+ */
+/* 
+   Localizable.strings
+   play-with-goldfish
+
+   Created by David Coen on 2011 01 22
+   Copyright 2010 Pleasure seeking morons. All rights reserved.
+ */
+
+
+"InfoTitle" = "Spielen mit Goldfischen";
+"InfoMessage" = "Touch:
+Futtermittel Goldfisch
+Viele Touch:
+Fotocamera zoom, pan e latitudine
+Shake:
+Reset della fotocamera e Goldfisch";
+"InfoButton" = "Continua";
+"OptionTitle" = "Impostazioni";
+"OptionMaterial" = "Goldfisch Colore";
+"OptionMaterialDescriptionKey" = "Seleziona Goldfisch materiale";
+"orange" = "Red";
+"white" = "Bianco";
+"black" = "Black";
+"gold" = "Giallo";
+"chromebump" = "Chrome bump";
+"chromebump2" = "Chrome 2 bump";
+"chrome" = "Chrome";
+"chrome2" = "Chrome 2";
+"OptionAnimation" = "Animazione";
+"OptionAnimationTypeDescriptionKey" = "Selezionare come il pesce rosso animato";
+"TAnimationNone" = "Nessuna animazione";
+"TAnimationAI" = "La selezione automatica";
+"TAnimationFeed" = "Feed";
+"TAnimationIdle" = "Inattivo";
+"TAnimationIdleAgitated" = "Eccitato";
+"TAnimationIdleSleep" = "Assonnato";
+"TAnimationMove" = "In movimento";
+"OptionMovement" = "Movimento";
+"OptionMovementTypeDescriptionKey" = "Selezionare come si muove il Goldfisch";
+"TMovementNone" = "Nessun movimento";
+"TMovementAI" = "Automatico";
+"TMovementInput" = "Touch screen";
+"OptionViewBackground" = "Sfondo";
+"OptionViewBackgroundTypeDescriptionKey" = "Seleziona sfondo aspetto";
+"TViewBackCamera" = "Camera";
+"TViewBackBlack" = "Black";
+"TViewBackWhite" = "Bianco";
+"TViewBackGray" = "Grey";
+"TViewBackLightBlue" = "Aqua";
+"TViewBackDarkBlue" = "Marina";
+"OptionViewCamera" = "Visualizza fotocamera";
+"OptionViewCameraTypeDescriptionKey" = "Selezionare la visualizzazione tipo di fotocamera";
+"TViewCameraAccelerometer" = "Usa Accelerometro";
+"TViewCameraTop" = "Vista dall'alto";
+"TViewCameraThreeQuater" = "3 / 4 vista";
+"TViewCameraHalf" = "1 / 2 vista";
+"TViewCameraQuater" = "1 / 4 vista";
+"TViewCameraFront" = "Front";
+"TViewCameraUnder" = "Al di sotto";
+"OptionOversampleTypeKey" = "Anti-aliasing";
+"OptionOversampleTypeDescriptionKey" = "Selezionare anti-aliasing di qualità";
+"TSuperSample10" = "Nessuno";
+"TSuperSample15" = "50%";
+"TSuperSample20" = "100%";
+"OptionResetKey" = "Ripristina Impostazioni";
+

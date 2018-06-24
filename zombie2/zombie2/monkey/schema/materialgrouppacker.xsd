@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="arraySubGroupName" type="arraySubGroupNameType"/>
+      <xsd:element name="arrayMaterialGroup" type="arrayMaterialGroupType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arraySubGroupNameType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="arrayMaterialGroupType">
+    <xsd:sequence>
+      <xsd:element name="materialGroup" type="materialGroupType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="materialGroupType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="needShader" type="xsd:boolean"/>
+      <xsd:element name="materialSubGroup" type="materialSubGroupType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="materialSubGroupType">
+    <xsd:sequence>
+      <xsd:element name="visible" type="xsd:boolean"/>
+      <xsd:element name="materialName" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="Schema/animationmaster.xsd"
+      >
+  <boneListPosition>
+    <name>BoneBall</name>
+    <name>Bip01</name>
+  </boneListPosition>
+  <boneListRotation>
+    <name>BoneBall</name>
+    <name>Bip01</name>
+    <name>Bip01 Pelvis</name>
+    <name>Bip01 L Thigh</name>
+    <name>Bip01 L Calf</name>
+    <name>Bip01 L Foot</name>
+    <name>Bip01 L Toe0</name>
+    <name>Bip01 L Clavicle</name>
+    <name>Bip01 L UpperArm</name>
+    <name>Bip01 L Forearm</name>
+    <name>Bip01 L Hand</name>
+    <name>Bip01 R Thigh</name>
+    <name>Bip01 Ponytail1</name>
+    <name>Bip01 R Calf</name>
+    <name>Bip01 R Foot</name>
+    <name>Bip01 R Toe0</name>
+    <name>Bip01 R Clavicle</name>
+    <name>Bip01 R UpperArm</name>
+    <name>Bip01 R Forearm</name>
+    <name>Bip01 R Hand</name>
+    <name>Bip01 Spine</name>
+    <name>Bip01 Spine1</name>
+    <name>Bip01 Neck</name>
+    <name>Bip01 Head</name>
+    <name>BoneLeftBreast</name>
+    <name>BoneRightBreast</name>
+    <name>BoneLeftBottom</name>
+    <name>BoneRightBottom</name>
+  </boneListRotation>
+  <boneListMorphWeight>
+    <name>blink</name>
+    <name>speak</name>
+    <name>smile</name>
+    <!--<name>weird</name>-->
+    <name>rightfist</name>
+    <name>leftfist</name>
+  </boneListMorphWeight>
+  <animationList>
+    <file>aprilanimation/back.xml</file>
+    <file>aprilanimation/fall.xml</file>
+    <file>aprilanimation/fallback.xml</file>
+    <file>aprilanimation/hithigh.xml</file>
+    <file>aprilanimation/hitjump.xml</file>
+    <file>aprilanimation/hitlow.xml</file>
+    <file>aprilanimation/hitmed.xml</file>
+    <file>aprilanimation/idle.xml</file>
+    <file>aprilanimation/loosegame.xml</file>
+    <file>aprilanimation/loosepoint.xml</file>
+    <file>aprilanimation/looseserve.xml</file>
+    <file>aprilanimation/menu.xml</file>
+    <file>aprilanimation/run.xml</file>
+    <file>aprilanimation/serve.xml</file>
+    <file>aprilanimation/walk.xml</file>
+    <file>aprilanimation/wingame.xml</file>
+    <file>aprilanimation/winpoint.xml</file>
+    <file>aprilanimation/winserve.xml</file>    
+  </animationList>
+</root>

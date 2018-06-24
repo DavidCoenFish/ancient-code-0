@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:complexType name="colourType">
+    <xsd:sequence>
+      <xsd:element name="red" type="xsd:unsignedByte"/>
+      <xsd:element name="green" type="xsd:unsignedByte"/>
+      <xsd:element name="blue" type="xsd:unsignedByte"/>
+      <xsd:element name="alpha" type="xsd:unsignedByte" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="lightTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="point"/>
+      <xsd:enumeration value="directional"/>
+      <xsd:enumeration value="spotlight"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="matrixType">
+    <xsd:sequence>
+      <xsd:element name="float" type="xsd:float" minOccurs="16" maxOccurs="16"/>
+    </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="nodeType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:group ref="componentTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="matrix" type="matrixType"/>
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="componentTypeGroup">
+    <xsd:choice>
+      <xsd:element name="componentAnimation" type="componentAnimationType"/>
+      <xsd:element name="componentBoneCollision" type="componentBoneCollisionType"/>
+      <xsd:element name="componentClient" type="componentClientType"/>
+      <xsd:element name="componentCollision" type="componentCollisionType"/>
+      <xsd:element name="componentFactoryStub" type="componentFactoryStubType"/>
+      <xsd:element name="componentFade" type="componentFadeType"/>
+      <xsd:element name="componentLight" type="componentLightType"/>
+      <xsd:element name="componentLightCollector" type="componentLightCollectorType"/>
+      <xsd:element name="componentNodeAttach" type="componentNodeAttachType"/>
+      <xsd:element name="componentParticle" type="componentParticleType"/>
+      <xsd:element name="componentPhysics" type="componentPhysicsType"/>
+      <xsd:element name="componentPointAtBone" type="componentPointAtBoneType"/>
+      <xsd:element name="componentRope" type="componentRopeType"/>
+      <xsd:element name="componentSpringBone" type="componentSpringBoneType"/>
+      <xsd:element name="componentVisual" type="componentVisualType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="componentAnimationType">
+    <xsd:sequence>
+      <xsd:element name="animationSetName" type="xsd:string" />
+      <xsd:element name="defaultAnimationName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentBoneCollisionType">
+    <xsd:sequence>
+      <xsd:element name="capsual" type="componentBoneCollisionCapsualType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="componentBoneCollisionCapsualType">
+    <xsd:sequence>
+      <xsd:element name="boneName" type="xsd:string" />
+      <xsd:element name="data" type="xsd:string" />
+      <xsd:element name="startX" type="xsd:float" />
+      <xsd:element name="startY" type="xsd:float" />
+      <xsd:element name="startZ" type="xsd:float" />
+      <xsd:element name="endX" type="xsd:float" />
+      <xsd:element name="endY" type="xsd:float" />
+      <xsd:element name="endZ" type="xsd:float" />
+      <xsd:element name="radius" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentClientType">
+    <xsd:sequence>
+      <xsd:element name="clientName" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentCollisionType">
+    <xsd:sequence>
+      <xsd:element name="materialId" type="xsd:int" />
+      <xsd:element name="data" type="xsd:string" />
+      <xsd:element name="flagActive" type="xsd:boolean" />
+      <xsd:element name="dataArray" type="componentCollisionDataType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentCollisionDataType">
+    <xsd:sequence>
+      <xsd:group ref="componentCollisionDataTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="componentCollisionDataTypeGroup">
+    <xsd:choice>
+      <xsd:element name="box" type="componentCollisionDataBoxType" />
+      <xsd:element name="sphere" type="componentCollisionDataSphereType" />
+      <xsd:element name="capsual" type="componentCollisionDataCapsualType" />
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="componentCollisionDataBoxType">
+    <xsd:sequence>
+      <xsd:element name="lowX" type="xsd:float" />
+      <xsd:element name="lowY" type="xsd:float" />
+      <xsd:element name="lowZ" type="xsd:float" />
+      <xsd:element name="highX" type="xsd:float" />
+      <xsd:element name="highY" type="xsd:float" />
+      <xsd:element name="highZ" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentCollisionDataSphereType">
+    <xsd:sequence>
+      <xsd:element name="originX" type="xsd:float" />
+      <xsd:element name="originY" type="xsd:float" />
+      <xsd:element name="originZ" type="xsd:float" />
+      <xsd:element name="radius" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentCollisionDataCapsualType">
+    <xsd:sequence>
+      <xsd:element name="startX" type="xsd:float" />
+      <xsd:element name="startY" type="xsd:float" />
+      <xsd:element name="startZ" type="xsd:float" />
+      <xsd:element name="endX" type="xsd:float" />
+      <xsd:element name="endY" type="xsd:float" />
+      <xsd:element name="endZ" type="xsd:float" />
+      <xsd:element name="radius" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentFactoryStubType">
+    <xsd:sequence>
+      <xsd:element name="factoryStubName" type="xsd:string" />
+      <xsd:element name="data" type="xsd:string" />   
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentFadeType">
+    <xsd:sequence>
+      <xsd:element name="duration" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentLightType">
+    <xsd:sequence>
+      <xsd:element name="type" type="lightTypeEnum" />
+      <xsd:element name="radius" type="xsd:float" />
+      <xsd:element name="colourAmbient" type="colourType" />
+      <xsd:element name="colourDiffuse" type="colourType" />
+      <xsd:element name="constant" type="xsd:float" />
+      <xsd:element name="linear" type="xsd:float" />
+      <xsd:element name="quadric" type="xsd:float" />
+      <xsd:element name="spotExponent" type="xsd:float" />
+      <xsd:element name="spotCutoff" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentLightCollectorType">
+    <xsd:sequence>
+      <xsd:element name="updateFrequency" type="xsd:int" />
+      <xsd:element name="updateOffset" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentNodeAttachType">
+    <xsd:sequence>
+      <xsd:element name="boneName" type="xsd:string" />
+      <xsd:element name="node" type="nodeType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentParticleType">
+    <xsd:sequence>
+      <xsd:element name="data" type="xsd:string" />
+      <xsd:element name="material" type="xsd:string" />
+      <xsd:element name="radius" type="xsd:float" />
+      <xsd:element name="defaultEmittor" type="xsd:int" />
+      <xsd:element name="defaultEmittorDuration" type="xsd:float" />
+      <xsd:element name="maxParticleCount" type="xsd:int" />
+      <xsd:element name="maxVertexCount" type="xsd:int" />
+      <xsd:element name="maxEmittorCount" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentPhysicsType">
+    <xsd:sequence>
+      <xsd:element name="massInvert" type="xsd:float" />
+      <xsd:element name="initialVelocityX" type="xsd:float" />
+      <xsd:element name="initialVelocityY" type="xsd:float" />
+      <xsd:element name="initialVelocityZ" type="xsd:float" />
+      <xsd:element name="flagAllowMove" type="xsd:boolean" />
+      <xsd:element name="flagAllowRotate" type="xsd:boolean" />
+      <xsd:element name="flagFreeze" type="xsd:boolean" />
+      <xsd:element name="flagBounceY0" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentPointAtBoneType">
+    <xsd:sequence>
+      <xsd:element name="boneName" type="xsd:string" />
+      <xsd:element name="maxAngleDeg" type="xsd:float" />
+      <xsd:element name="localAtX" type="xsd:float" />
+      <xsd:element name="localAtY" type="xsd:float" />
+      <xsd:element name="localAtZ" type="xsd:float" />
+      <xsd:element name="worldTargetX" type="xsd:float" />
+      <xsd:element name="worldTargetY" type="xsd:float" />
+      <xsd:element name="worldTargetZ" type="xsd:float" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentRopeType">
+    <xsd:sequence>
+      <xsd:element name="knotCount" type="xsd:int" />
+      <xsd:element name="knotRadius" type="xsd:float" />
+      <xsd:element name="material" type="xsd:string" />
+      <xsd:element name="springConstant" type="xsd:float" />
+      <xsd:element name="springDampen" type="xsd:float" />
+      <xsd:element name="showDebug" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="componentSpringBoneType">
+    <xsd:sequence>
+      <xsd:element name="data" type="componentSpringBoneDataType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="componentSpringBoneDataType">
+    <xsd:sequence>
+      <xsd:element name="boneName" type="xsd:string" />
+      <xsd:element name="centerMass" type="vector3Type" />
+      <xsd:element name="constant" type="xsd:float" />
+      <xsd:element name="dampen" type="xsd:float" />
+      <xsd:element name="max" type="xsd:float" />
+      <xsd:element name="targetDown" type="xsd:boolean" />
+      <xsd:element name="debug" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="vector3Type">
+    <xsd:sequence>
+      <xsd:element name="float" type="xsd:float" minOccurs="3" maxOccurs="3" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="componentVisualType">
+    <xsd:sequence>
+      <xsd:element name="mesh" type="xsd:string" />
+      <xsd:element name="material" type="xsd:string" />
+      <xsd:element name="radius" type="xsd:float" />
+      <xsd:element name="data" type="xsd:string" />
+      <xsd:element name="visible" type="xsd:boolean" />
+      <xsd:element name="useCameraTransform" type="xsd:boolean" />
+      <xsd:element name="onlyUseTransformPos" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

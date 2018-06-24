@@ -1,0 +1,65 @@
+/* 
+   Localizable.strings
+   play-with-goldfish
+
+   Created by David Coen on 2011 01 22
+   Copyright 2010 Pleasure seeking morons. All rights reserved.
+ */
+
+
+"InfoTitle" = "Bermain dengan ikan mas";
+"InfoMessage" = "Touch:
+Pakan ikan mas
+Multi Touch:
+Kamera zoom, pan dan garis lintang
+Shake:
+Reset Kamera dan ikan mas";
+"InfoButton" = "Terus";
+"OptionTitle" = "Pengaturan";
+"OptionMaterial" = "Warna ikan mas";
+"OptionMaterialDescriptionKey" = "Pilih Goldfish materi";
+"orange" = "Merah";
+"white" = "Putih";
+"black" = "Hitam";
+"gold" = "Kuning";
+"chromebump" = "Khrom bump";
+"chromebump2" = "Khrom 2 bump";
+"chrome" = "Khrom";
+"chrome2" = "Khrom 2";
+"OptionAnimation" = "Animasi";
+"OptionAnimationTypeDescriptionKey" = "Pilih bagaimana bernyawa ikan mas";
+"TAnimationNone" = "No animasi";
+"TAnimationAI" = "Pemilihan otomatis";
+"TAnimationFeed" = "Makan";
+"TAnimationIdle" = "Diam";
+"TAnimationIdleAgitated" = "Gembira";
+"TAnimationIdleSleep" = "Sepi";
+"TAnimationMove" = "Pindah";
+"OptionMovement" = "Gerakan";
+"OptionMovementTypeDescriptionKey" = "Pilih bagaimana ikan mas bergerak";
+"TMovementNone" = "Tidak ada gerakan";
+"TMovementAI" = "Otomatis";
+"TMovementInput" = "Layar sentuh";
+"OptionViewBackground" = "Latar belakang";
+"OptionViewBackgroundTypeDescriptionKey" = "Pilih tampilan latar belakang";
+"TViewBackCamera" = "Kamera";
+"TViewBackBlack" = "Hitam";
+"TViewBackWhite" = "Putih";
+"TViewBackGray" = "Grey";
+"TViewBackLightBlue" = "Aqua";
+"TViewBackDarkBlue" = "Angkatan laut";
+"OptionViewCamera" = "Lihat kamera";
+"OptionViewCameraTypeDescriptionKey" = "Pilih jenis tampilan kamera";
+"TViewCameraAccelerometer" = "Gunakan Accelerometer";
+"TViewCameraTop" = "Tampak atas";
+"TViewCameraThreeQuater" = "3 / 4 view";
+"TViewCameraHalf" = "1 / 2 view";
+"TViewCameraQuater" = "1 / 4 view";
+"TViewCameraFront" = "Depan";
+"TViewCameraUnder" = "Di bawah";
+"OptionOversampleTypeKey" = "Anti-aliasing";
+"OptionOversampleTypeDescriptionKey" = "Anti-aliasing Pilih kualitas";
+"TSuperSample10" = "Tak satupun";
+"TSuperSample15" = "50%";
+"TSuperSample20" = "100%";
+"OptionResetKey" = "Kembalikan Pengaturan";

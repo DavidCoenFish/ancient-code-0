@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xsd:schema 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xsd:simpleType name="primitiveTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TPoint"/>
+      <xsd:enumeration value="TLine"/>
+      <xsd:enumeration value="TLineStrip"/>
+      <xsd:enumeration value="TLineLoop"/>
+      <xsd:enumeration value="TTriangle"/>
+      <xsd:enumeration value="TTriangleStrip"/>
+      <xsd:enumeration value="TTriangleFan"/>
+    </xsd:restriction>
+  </xsd:simpleType>  
+  
+  <xsd:element name="root" type="rootType" />
+
+  <xsd:complexType name="rootType">
+    <xsd:sequence>
+      <xsd:element name="primitiveType" type="primitiveTypeEnum"/>
+      <xsd:element name="useIndex" type="xsd:boolean"/>
+      <xsd:element name="staticEdgeList" type="xsd:boolean"/>
+      <xsd:element name="dynamicEdgeList" type="xsd:boolean"/>
+      <xsd:element name="skeleton" type="xsd:string"/>
+      <xsd:element name="streamInfoArray" type="streamInfoArrayType"/>
+      <xsd:element name="vertexArray" type="vertexArrayType"/>
+      <xsd:element name="faceArray" type="faceArrayType"/>
+      <xsd:element name="modifierArray" type="modifierArrayType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamInfoArrayType">
+    <xsd:sequence>
+      <xsd:element name="streamInfo" type="streamInfoType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamInfoType">
+    <xsd:sequence>
+      <xsd:element name="usage" type="xsd:string"/>
+      <xsd:element name="type" type="xsd:string"/>
+      <xsd:element name="stride" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="vertexArrayType">
+    <xsd:sequence>
+      <xsd:element name="vertex" type="vertexType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="vertexType">
+    <xsd:sequence>
+      <xsd:element name="keyIndex" type="xsd:int"/>
+      <xsd:element name="streamArray" type="streamArrayType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamArrayType">
+    <xsd:sequence>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+        <xsd:element name="streamByte" type="streamByteType"/>
+        <xsd:element name="streamFloat" type="streamFloatType"/>
+        <xsd:element name="streamInt" type="streamIntType"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamByteType">
+    <xsd:sequence>
+      <xsd:element name="item" type="xsd:unsignedByte" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamFloatType">
+    <xsd:sequence>
+      <xsd:element name="item" type="xsd:float" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="streamIntType">
+    <xsd:sequence>
+      <xsd:element name="item" type="xsd:unsignedInt" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="faceArrayType">
+    <xsd:sequence>
+      <xsd:element name="face" type="faceType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="faceType">
+    <xsd:sequence>
+      <xsd:element name="index0" type="xsd:int"/>
+      <xsd:element name="index1" type="xsd:int"/>
+      <xsd:element name="index2" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="faceIndexType">
+    <xsd:sequence>
+      <xsd:element name="index" type="xsd:int" minOccurs="3" maxOccurs="3"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="modifierArrayType">
+    <xsd:sequence>
+      <xsd:group ref="modifierTypeGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="modifierTypeGroup">
+    <xsd:choice>
+      <xsd:element name="modifierSkin" type="modifierSkinType"/>
+      <xsd:element name="modifierCloth" type="modifierClothType"/>
+      <xsd:element name="modifierMorph" type="modifierMorphType"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="modifierSkinType">
+    <xsd:sequence>
+      <xsd:element name="bone" type="modifierSkinBoneType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="matrixType">
+    <xsd:sequence>
+      <xsd:element name="float" type="xsd:float" minOccurs="16" maxOccurs="16"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="modifierSkinBoneType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="invertBindMatrix" type="matrixType"/>
+      <xsd:element name="vertexKeyIndex" type="modifierSkinBoneVertexKeyIndexType"/>
+      <xsd:element name="vertexKeyWeight" type="modifierSkinBoneVertexKeyWeightType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="modifierSkinBoneVertexKeyIndexType">
+    <xsd:sequence>
+      <xsd:element name="index" type="xsd:int" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="modifierSkinBoneVertexKeyWeightType">
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:float" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="modifierClothType">
+    <xsd:sequence>
+      <xsd:element name="gravity" type="xsd:float"/>
+      <xsd:element name="mass" type="xsd:float"/>
+      <xsd:element name="springConstant" type="xsd:float"/>
+      <xsd:element name="springDampen" type="xsd:float"/>
+      <xsd:element name="vertexWeightArray" type="vertexWeightArrayType"/>
+      <xsd:element name="springDataArray" type="springDataArrayType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="vertexWeightArrayType">
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:float" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="springDataArrayType">
+    <xsd:sequence>
+      <xsd:element name="springData" type="springDataType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="springDataType">
+    <xsd:sequence>
+      <xsd:element name="indexOne" type="xsd:int"/>
+      <xsd:element name="indexTwo" type="xsd:int"/>
+      <xsd:element name="length" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="modifierMorphType">
+    <xsd:sequence>
+      <xsd:element name="target" type="modifierMorphTargetType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="streamSupported" type="modifierMorphStreamType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="modifierMorphStreamType">
+    <xsd:sequence>
+      <xsd:element name="item" type="xsd:boolean" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="modifierMorphTargetType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="vertexArray" type="vertexArrayType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+</xsd:schema>

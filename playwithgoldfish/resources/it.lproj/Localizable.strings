@@ -1,0 +1,64 @@
+/* 
+   Localizable.strings
+   playwithgoldfish
+
+   Created by David Coen on 24/01/11.
+   Copyright 2011 Pleasure seeking morons. All rights reserved.
+ */
+
+"InfoTitle" = "Giocare con i pesci rossi";
+"InfoMessage" = "Touch:
+Feed Goldfish
+Multi Touch:
+Fotocamera zoom, pan e latitudine
+Shake:
+Reset della fotocamera e pesce rosso";
+"InfoButton" = "Continua";
+"OptionTitle" = "Impostazioni";
+"OptionMaterial" = "Goldfish Colore";
+"OptionMaterialDescriptionKey" = "Seleziona pesce rosso materiale";
+"orange" = "Red";
+"white" = "Bianco";
+"black" = "Black";
+"gold" = "Giallo";
+"chromebump" = "Chrome bump";
+"chromebump2" = "Bump Chrome2";
+"chrome" = "Chrome";
+"chrome2" = "Chrome2";
+"OptionAnimation" = "Animazione";
+"OptionAnimationTypeDescriptionKey" = "Selezionare come il pesce rosso anima";
+"TAnimationNone" = "Nessuna animazione";
+"TAnimationAI" = "La selezione automatica";
+"TAnimationFeed" = "Feed";
+"TAnimationIdle" = "Inattivo";
+"TAnimationIdleAgitated" = "Eccitato";
+"TAnimationIdleSleep" = "Assonnato";
+"TAnimationMove" = "In movimento";
+"OptionMovement" = "Movimento";
+"OptionMovementTypeDescriptionKey" = "Selezionare come si muove il pesce rosso";
+"TMovementNone" = "Nessun movimento";
+"TMovementAI" = "Automatico";
+"TMovementInput" = "Touch screen";
+"OptionViewBackground" = "Sfondo";
+"OptionViewBackgroundTypeDescriptionKey" = "Seleziona sfondo aspetto";
+"TViewBackCamera" = "Camera";
+"TViewBackBlack" = "Black";
+"TViewBackWhite" = "Bianco";
+"TViewBackGray" = "Grey";
+"TViewBackLightBlue" = "Aqua";
+"TViewBackDarkBlue" = "Marina";
+"OptionViewCamera" = "Visualizza fotocamera";
+"OptionViewCameraTypeDescriptionKey" = "Selezionare la visualizzazione tipo di fotocamera";
+"TViewCameraAccelerometer" = "Usa Accelerometro";
+"TViewCameraTop" = "Vista dall'alto";
+"TViewCameraThreeQuater" = "3 / 4 vista";
+"TViewCameraHalf" = "1 / 2 vista";
+"TViewCameraQuater" = "1 / 4 vista";
+"TViewCameraFront" = "Front";
+"TViewCameraUnder" = "Beneath";
+"OptionOversampleTypeKey" = "Anti-aliasing";
+"OptionOversampleTypeDescriptionKey" = "Selezionare anti-aliasing di qualità";
+"TSuperSample10" = "Nessuno";
+"TSuperSample15" = "50%";
+"TSuperSample20" = "100%";
+"OptionResetKey" = "Ripristina Impostazioni";

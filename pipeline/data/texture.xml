@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- DSC Dsc Export 2010 09 16 -->
+<root
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      >
+	<textureDataArray>
+    
+		<textureData>
+			<textureFile>D:\binaryspace\develop\C30\mobile\ios\app\art\image\image.tga</textureFile>
+			<textureDataName>image.data</textureDataName>
+			<textureDestinationType>TRgba</textureDestinationType>
+		</textureData>
+    
+    <!--<textureData>
+      <textureFile>D:\development\project\tools\pipeline\data\golddiffusefin.png</textureFile>
+      <textureFile platform="ios">D:\development\project\tools\pipeline\data\golddiffusefin.pvr</textureFile>
+      <textureDataName>golddiffusefin.data</textureDataName>
+      <textureDestinationType>TRgba</textureDestinationType>
+      <textureDestinationType platform="ios">TPVRTC4_rgba</textureDestinationType>
+    </textureData>-->
+  
+    
+	</textureDataArray>
+</root>
